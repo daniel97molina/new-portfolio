@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0e0f13" />
+  <meta name="description" content="Kevin Daniel Molina — Full Stack Software Engineer. Java, Spring, React & cloud. Portfolio and CV." />
+  <meta name="author" content="Kevin Daniel Molina Ramírez" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kevin Daniel Molina — Full Stack Software Engineer" />
+  <meta property="og:description" content="Java · Spring · React · AWS. Building reliable, scalable software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danielmolina.surge.sh/" />
+
+  <title>Kevin Daniel Molina — Full Stack Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- atmosphere layers -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+
+  <!-- top nav -->
+  <nav class="nav" aria-label="Section navigation">
+    <a class="nav__brand" href="#top"><span class="prompt">$</span> kdm<span class="blink">_</span></a>
+    <div class="nav__links">
+      <a href="#experience">experience</a>
+      <a href="#skills">skills</a>
+      <a href="#focus">ai</a>
+      <a href="#projects">projects</a>
+      <a href="#art">3d&nbsp;art</a>
+      <a href="#education">education</a>
+      <a class="nav__cta" href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="terminal reveal" data-reveal>
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--amber"></span>
+          <span class="dot dot--green"></span>
+          <span class="terminal__title">kevin@portfolio: ~</span>
+        </div>
+        <div class="terminal__body">
+          <p class="term-line"><span class="prompt">$</span> whoami</p>
+          <h1 class="hero__name">Kevin&nbsp;Daniel Molina&nbsp;Ramírez</h1>
+          <p class="term-line"><span class="prompt">$</span> cat role.txt</p>
+          <p class="hero__role">
+            <span id="typed" aria-hidden="true"></span><span class="blink">▋</span>
+            <span class="sr-only">Full Stack Software Engineer</span>
+          </p>
+
+          <p class="hero__bio">
+            I'm a Salvadoran software engineer drawn to problems with real stakes — where uptime, data
+            integrity and a clean experience all have to hold at once. By day I build Java &amp; Spring
+            services on GCP at Telus International, currently on their recommendation engine. On the side
+            I design AI-powered products and ship them end to end on the cloud — most recently
+            <em>Rori</em>, an LLM-driven medical-records assistant. I'm increasingly focused where applied
+            AI meets solid cloud engineering: systems that are reliable, secure, and genuinely useful.
+          </p>
+
+          <p class="hero__status">
+            <span class="status-dot"></span>
+            <span class="mono">San Salvador, El Salvador</span>
+            <span class="sep">·</span>
+            <span class="mono">GMT−6</span>
+            <span class="sep">·</span>
+            <span class="mono">open to remote</span>
+          </p>
+
+          <div class="hero__links">
+            <a class="btn" href="mailto:daniel.97.molin@gmail.com">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg>
+              Email
+            </a>
+            <a class="btn" href="https://github.com/daniel97molina" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section">
+      <header class="section__head reveal" data-reveal>
+        <span class="section__path">~/experience</span>
+        <h2 class="section__title">Where I've worked</h2>
+      </header>
+
+      <div class="timeline">
+        <article class="role reveal" data-reveal>
+          <div class="role__meta">
+            <span class="role__dates mono">Jun 2022 — Present</span>
+            <span class="role__company">Telus International</span>
+          </div>
+          <div class="role__body">
+            <h3 class="role__title">Backend Software Engineer</h3>
+            <p class="role__summary">
+              Four years building production backend systems across three projects — most recently
+              Telus' recommendation engine. I work inside a Scrum team across the full
+              delivery cycle (design, code, test, document, integrate) alongside QA, architecture and
+              business stakeholders.
+            </p>
+            <ul class="role__points">
+              <li>Building and maintaining the recommendation engine's services on Java &amp; Spring, Node.js / Express, PostgreSQL on GCP.</li>
+              <li>Designed and shipped microservices for a large health-insurance platform, integrating systems over SOAP &amp; REST against Oracle.</li>
+              <li>Earlier, contributed to an open-source collaborative software suite and built tooling for its migration.</li>
+            </ul>
+            <ul class="tags mono">
+              <li>Java</li><li>Spring</li><li>GCP</li><li>PostgreSQL</li><li>Node.js</li><li>Express</li><li>REST &amp; SOAP</li><li>Oracle</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role reveal" data-reveal>
+          <div class="role__meta">
+            <span class="role__dates mono">Jul 2021 — Jun 2022</span>
+            <span class="role__company">Universidad de El Salvador — FMOcc</span>
+          </div>
+          <div class="role__body">
+            <h3 class="role__title">Full Stack Developer · Servers &amp; Network Manager</h3>
+            <p class="role__summary">
+              Owned the faculty's web systems and the infrastructure underneath them — from Java EE
+              applications to the networks, servers and services the whole campus relied on.
+            </p>
+            <ul class="role__points">
+              <li>Maintained and updated web systems built with Java EE and JSP.</li>
+              <li>Ran internal &amp; external services: IP telephony (Asterisk), DNS, firewall, mail, Wi-Fi and dockerized apps.</li>
+              <li>Administered Moodle virtual classrooms and the campus networks end to end.</li>
+            </ul>
+            <ul class="tags mono">
+              <li>Java EE</li><li>JSP</li><li>MySQL</li><li>PostgreSQL</li><li>Docker</li><li>Asterisk</li><li>Linux</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role reveal" data-reveal>
+          <div class="role__meta">
+            <span class="role__dates mono">Sep 2020 — Jun 2021</span>
+            <span class="role__company">Universidad de El Salvador — FMOcc</span>
+          </div>
+          <div class="role__body">
+            <h3 class="role__title">Full Stack Developer · Servers &amp; Network Assistant</h3>
+            <p class="role__summary">
+              Helped modernize legacy systems and keep critical campus services running while learning
+              the infrastructure ropes hands-on.
+            </p>
+            <ul class="role__points">
+              <li>Migrated and updated legacy web systems written in Java EE and JSP.</li>
+              <li>Configured and maintained IP telephony, security cameras, networks and Wi-Fi.</li>
+            </ul>
+            <ul class="tags mono">
+              <li>Java EE</li><li>JSP</li><li>PostgreSQL</li><li>Docker</li><li>Networking</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section">
+      <header class="section__head reveal" data-reveal>
+        <span class="section__path">~/skills</span>
+        <h2 class="section__title">Tools of the trade</h2>
+      </header>
+
+      <div class="skills-grid">
+        <div class="skill-card skill-card--accent reveal" data-reveal>
+          <h3><span class="prompt">//</span> AI &amp; LLMs</h3>
+          <ul class="tags mono">
+            <li>LLM application design</li><li>Agentic AI</li><li>RAG</li><li>Prompt engineering</li>
+            <li>AWS Bedrock (Claude)</li><li>Vertex AI (Gemini)</li><li>Document AI / OCR</li>
+            <li>Async LLM pipelines</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal" data-reveal>
+          <h3><span class="prompt">//</span> Backend</h3>
+          <ul class="tags mono">
+            <li>Java</li><li>Spring Boot</li><li>Spring Framework</li><li>Node.js</li><li>Express</li>
+            <li>REST &amp; SOAP</li><li>JUnit</li><li>Mockito</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal" data-reveal>
+          <h3><span class="prompt">//</span> Cloud &amp; DevOps</h3>
+          <ul class="tags mono">
+            <li>AWS</li><li>GCP</li><li>Terraform</li><li>SST</li>
+            <li>Docker</li><li>GitHub Actions</li><li>Linux</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal" data-reveal>
+          <h3><span class="prompt">//</span> Frontend</h3>
+          <ul class="tags mono">
+            <li>React</li><li>React Native</li><li>TypeScript</li><li>Next.js</li>
+            <li>JavaScript</li><li>HTML &amp; CSS</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal" data-reveal>
+          <h3><span class="prompt">//</span> Data</h3>
+          <ul class="tags mono">
+            <li>PostgreSQL</li><li>Aurora DSQL</li><li>Oracle</li><li>MySQL</li>
+            <li>MongoDB</li><li>DynamoDB</li><li>Sanity</li><li>Spring Data / JPA</li>
+          </ul>
+        </div>
+        <div class="skill-card reveal" data-reveal>
+          <h3><span class="prompt">//</span> Ways of working</h3>
+          <ul class="tags mono">
+            <li>Microservices</li><li>Serverless</li><li>Scrum</li><li>Git &amp; GitHub</li>
+            <li>CI/CD</li><li>Jira</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AI × CLOUD FOCUS ===================== -->
+    <section id="focus" class="section">
+      <header class="section__head reveal" data-reveal>
+        <span class="section__path">~/focus</span>
+        <h2 class="section__title">Where I'm headed: AI&nbsp;×&nbsp;cloud</h2>
+      </header>
+
+      <div class="focus-panel reveal" data-reveal>
+        <p class="focus-panel__lead">
+          My recent work lives at the intersection of applied AI and cloud engineering. With
+          <strong>Rori</strong> I built a production LLM pipeline end to end — OCR with AWS Textract,
+          then an indexing-and-summarization workflow over Claude (Bedrock) and Gemini (Vertex&nbsp;AI)
+          behind a provider-abstracted service with retry and fallback — running asynchronously on Java
+          virtual threads, fronted by a React/TypeScript app and backed by Terraform-managed AWS infra.
+          It's the direction I'm doubling down on: dependable, secure systems that put modern AI to real,
+          practical use.
+        </p>
+        <ul class="focus-chips mono">
+          <li>Production LLM pipelines</li>
+          <li>Multi-provider (Bedrock&nbsp;/&nbsp;Vertex)</li>
+          <li>Serverless on AWS</li>
+          <li>HIPAA-conscious by design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section">
+      <header class="section__head reveal" data-reveal>
+        <span class="section__path">~/projects</span>
+        <h2 class="section__title">Things I've built</h2>
+        <p class="section__lead">
+          A mix of client work and personal apps shipped end to end — backend, frontend and the
+          parts in between.
+        </p>
+      </header>
+
+      <div class="projects-grid">
+        <!-- Rori -->
+        <article class="card reveal" data-reveal>
+          <div class="card__media card__media--logo">
+            <img src="assets/rori.jpg" alt="Rori — AI-powered Review of Records" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Rori</h3>
+            <p class="card__desc">
+              An AI-powered medical <em>Review of Records</em> assistant. Doctors upload PDFs of patient
+              records; Rori runs OCR, indexes each individual record, and generates AI summaries tagged
+              by category and severity — through an async pipeline on Java virtual threads. The LLM layer
+              is provider-abstracted (Claude on Bedrock, Gemini on Vertex&nbsp;AI) with retry and fallback,
+              and it's built HIPAA-conscious from the ground up: per-user data isolation, in-memory
+              tokens, and no PHI in logs.
+            </p>
+            <ul class="tags mono">
+              <li>Java</li><li>Spring Boot</li><li>React</li><li>TypeScript</li><li>Python</li>
+              <li>AWS Bedrock</li><li>Vertex AI</li><li>Textract</li><li>Aurora DSQL</li><li>Terraform</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- EOPLAT -->
+        <article class="card reveal" data-reveal>
+          <div class="card__media">
+            <img src="assets/eoplat.jpg" alt="EOPLAT website" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">EOPLAT website</h3>
+            <p class="card__desc">
+              A full rebuild for EOPLAT (Eagles of Peace Latinoamérica), a Guatemalan missionary NGO —
+              migrating a 9-year-old WordPress site to a modern stack. A statically-exported Next.js site
+              with a Sanity headless CMS, fronting a serverless AWS backend (Lambda&nbsp;+&nbsp;Cognito) that
+              powers mission-enrollment and a role-based admin dashboard. Deployed on Cloudflare Pages and
+              engineered to run at near-zero hosting cost.
+            </p>
+            <ul class="tags mono">
+              <li>Next.js</li><li>React</li><li>Sanity</li><li>AWS Lambda</li><li>Cognito</li>
+              <li>SST</li><li>Cloudflare Pages</li>
+            </ul>
+            <div class="card__links">
+              <!-- TODO: swap in the production domain (eoplat.org) once live -->
+              <a href="https://eoplat-test.pages.dev/" target="_blank" rel="noopener noreferrer">Live preview ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- WiMouse (consolidated) -->
+        <article class="card reveal" data-reveal>
+          <div class="card__media">
+            <img src="assets/wimouse.jpg" alt="WiMouse remote control app" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">WiMouse</h3>
+            <p class="card__desc">
+              An all-in-one remote control for your computer: a precise touchpad, media keys and a full
+              keyboard, all from your phone. A cross-platform desktop server receives the input events
+              over WebSockets and executes them locally. Designed to be effortless to set up.
+            </p>
+            <ul class="tags mono">
+              <li>React Native</li><li>Node.js</li><li>Electron</li><li>WebSockets</li><li>RobotJS</li>
+            </ul>
+            <div class="card__links">
+              <a href="https://play.google.com/store/apps/details?id=dev.studios503.wimouse" target="_blank" rel="noopener noreferrer">Google&nbsp;Play ↗</a>
+              <a href="https://apps.apple.com/us/app/wimouse-remote-control/id1583106552" target="_blank" rel="noopener noreferrer">App&nbsp;Store ↗</a>
+              <a href="https://wimouse.web.app/" target="_blank" rel="noopener noreferrer">Website ↗</a>
+              <a href="https://github.com/daniel97molina/wimouse-website" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Webcam4all (consolidated) -->
+        <article class="card reveal" data-reveal>
+          <div class="card__media">
+            <img src="assets/w4a1.jpg" alt="Webcam4all app" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Webcam4all</h3>
+            <p class="card__desc">
+              An Android app that turns a phone into a 1080p wireless webcam for Windows or macOS. It
+              captures each frame, encodes it to JPEG and streams it over the local network via HTTP.
+              The real challenge: a low-latency, fault-tolerant stream that still looks sharp.
+            </p>
+            <ul class="tags mono">
+              <li>Android</li><li>React</li><li>HTTP streaming</li>
+            </ul>
+            <div class="card__links">
+              <a href="https://play.google.com/store/apps/details?id=dm.camera.webcamxipcamera" target="_blank" rel="noopener noreferrer">Google&nbsp;Play ↗</a>
+              <a href="https://webcam4all.surge.sh/" target="_blank" rel="noopener noreferrer">Website ↗</a>
+              <a href="https://github.com/daniel97molina/webcam4allSite" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+                <!-- ECO Library -->
+        <article class="card reveal" data-reveal>
+          <div class="card__media">
+            <video src="assets/eco-library.mp4" poster="assets/eco-library-poster.jpg"
+                   autoplay loop muted playsinline preload="metadata"
+                   aria-label="ECO Library demo"></video>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">ECO Library</h3>
+            <p class="card__desc">
+              A library management system built for a private school. Students search the catalog with
+              rich filters and log media usage; administrators manage books, authors, publishers, tags,
+              loans and reports. The hard part was keeping it intuitive enough for the youngest students
+              without sacrificing depth for the staff.
+            </p>
+            <ul class="tags mono">
+              <li>React</li><li>Spring Boot</li><li>Spring Data</li><li>JWT</li><li>JasperReports</li><li>PostgreSQL</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- This site -->
+        <article class="card reveal" data-reveal>
+          <div class="card__media">
+            <img src="assets/this-site.jpg" alt="This portfolio website" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">This site</h3>
+            <p class="card__desc">
+              The page you're reading. A hand-built, dependency-free portfolio that doubles as a
+              printable CV — save it straight to PDF and the dark theme comes along for the ride.
+            </p>
+            <ul class="tags mono">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <div class="card__links">
+              <a href="https://github.com/daniel97molina/dm-portfolio" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== 3D ART ===================== -->
+    <section id="art" class="section">
+      <header class="section__head reveal" data-reveal>
+        <span class="section__path">~/3d-art</span>
+        <h2 class="section__title">Off the clock: 3D art</h2>
+        <p class="section__lead">
+          When I'm not writing code, I model. I sculpt and texture in Blender and Substance Painter
+          (Cinema 4D in a past life) and sell the results on TurboSquid.
+        </p>
+      </header>
+
+      <div class="gallery reveal" data-reveal>
+        <figure><img src="assets/3d1.jpg" alt="3D render 1" loading="lazy" /></figure>
+        <figure><img src="assets/3d2.jpg" alt="3D render 2" loading="lazy" /></figure>
+        <figure><img src="assets/3d3.jpg" alt="3D render 3" loading="lazy" /></figure>
+        <figure><img src="assets/3d4.jpg" alt="3D render 4" loading="lazy" /></figure>
+        <figure><img src="assets/3d5.jpg" alt="3D render 5" loading="lazy" /></figure>
+      </div>
+      <p class="gallery__cta reveal" data-reveal>
+        <a href="https://www.turbosquid.com/Search/Artists/3-D-W-o-r-l-d" target="_blank" rel="noopener noreferrer">See the collection on TurboSquid ↗</a>
+      </p>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section">
+      <header class="section__head reveal" data-reveal>
+        <span class="section__path">~/education</span>
+        <h2 class="section__title">Education &amp; credentials</h2>
+      </header>
+
+      <div class="edu-grid">
+        <article class="edu-card reveal" data-reveal>
+          <h3>Information Systems Engineering</h3>
+          <p class="edu-card__org">Universidad de El Salvador</p>
+          <p class="edu-card__meta mono">2015 — 2019 · Graduated with honors</p>
+        </article>
+        <article class="edu-card reveal" data-reveal>
+          <h3>AWS Partner: Technical Accreditation</h3>
+          <p class="edu-card__org">Amazon Web Services Training &amp; Certification</p>
+          <p class="edu-card__meta mono">
+            <a href="https://www.credly.com/badges/4ff8043b-5e8a-433c-b269-e1dfc25b5f2b" target="_blank" rel="noopener noreferrer">View badge ↗</a>
+          </p>
+        </article>
+        <article class="edu-card reveal" data-reveal>
+          <h3>English — C2 Proficient</h3>
+          <p class="edu-card__org">EF SET Certificate · Native Spanish</p>
+          <p class="edu-card__meta mono">
+            <a href="https://www.efset.org/cert/E6ZjBV" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <footer id="contact" class="contact">
+      <div class="reveal" data-reveal>
+        <span class="section__path">~/contact</span>
+        <h2 class="contact__title">Let's build something</h2>
+        <p class="contact__lead">
+          Open to interesting full-stack work and collaborations. The fastest way to reach me is email.
+        </p>
+        <div class="contact__links">
+          <a class="btn btn--lg" href="mailto:daniel.97.molin@gmail.com">daniel.97.molin@gmail.com</a>
+          <a class="btn btn--lg" href="https://github.com/daniel97molina" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn--lg" href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p class="contact__foot mono">
+          San Salvador, El Salvador · GMT−6 · open to remote &nbsp;—&nbsp; built from scratch, no frameworks.
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

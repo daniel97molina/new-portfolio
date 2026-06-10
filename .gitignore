@@ -1,0 +1,14 @@
+# Old site reference snapshot (kept locally, not part of the new portfolio)
+Daniel Molina - Full Stack Developer.html
+Daniel Molina - Full Stack Developer_files/
+
+# Internal / source reference material (not for publishing)
+rori-CLAUDE.md
+rori-logo.png
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
