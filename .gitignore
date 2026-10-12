@@ -12,3 +12,10 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Private notes and client proposals
+q&a.txt
+docs/
+
+# Local Claude Code tooling (Impeccable skill)
+.claude/

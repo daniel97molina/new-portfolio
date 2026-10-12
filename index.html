@@ -3,476 +3,304 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0e0f13" />
-  <meta name="description" content="Kevin Daniel Molina — Full Stack Software Engineer. Java, Spring, React & cloud. Portfolio and CV." />
+  <meta name="theme-color" content="#0000aa" />
+  <title>Daniel Molina, Backend Engineer</title>
+  <meta name="description" content="Daniel Molina builds Java and Spring Boot backends, cloud infrastructure and applied-AI products. Open to remote and contract roles with US and Canadian teams." />
   <meta name="author" content="Kevin Daniel Molina Ramírez" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Kevin Daniel Molina — Full Stack Software Engineer" />
-  <meta property="og:description" content="Java · Spring · React · AWS. Building reliable, scalable software." />
+  <meta property="og:title" content="Daniel Molina, Backend Engineer" />
+  <meta property="og:description" content="Java, Spring Boot, cloud and applied AI. Currently on a recommendation engine handling about 40M requests a month." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://danielmolina.surge.sh/" />
+  <meta property="og:url" content="https://danielmolina.pages.dev/" />
 
-  <title>Kevin Daniel Molina — Full Stack Software Engineer</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-
+  <link rel="preload" href="fonts/ibm-vga-8x16.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230000aa'/%3E%3Crect x='3' y='11' width='8' height='2' fill='%23ffff55'/%3E%3C/svg%3E" />
 </head>
 <body>
-  <!-- atmosphere layers -->
-  <div class="grain" aria-hidden="true"></div>
-  <div class="glow" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- top nav -->
-  <nav class="nav" aria-label="Section navigation">
-    <a class="nav__brand" href="#top"><span class="prompt">$</span> kdm<span class="blink">_</span></a>
-    <div class="nav__links">
-      <a href="#experience">experience</a>
-      <a href="#skills">skills</a>
-      <a href="#focus">ai</a>
-      <a href="#projects">projects</a>
-      <a href="#art">3d&nbsp;art</a>
-      <a href="#education">education</a>
-      <a class="nav__cta" href="#contact">contact</a>
+  <!-- ===== menu bar ===== -->
+  <header class="menubar">
+    <nav class="menubar__nav" aria-label="Sections">
+      <a class="menubar__brand" href="#top" aria-label="Back to top">≡</a>
+      <a href="#work" data-key="w"><span class="hk">W</span>ork</a>
+      <a href="#projects" data-key="p"><span class="hk">P</span>rojects</a>
+      <a href="#skills" data-key="s"><span class="hk">S</span>kills</a>
+      <a href="#art" data-key="a"><span class="hk">A</span>rt</a>
+      <a href="#contact" data-key="c"><span class="hk">C</span>ontact</a>
+    </nav>
+    <a class="menubar__cv" href="cv.pdf" download="Kevin-Daniel-Molina-CV.pdf">CV.PDF</a>
+  </header>
+
+  <main id="main" class="desktop">
+
+    <!-- ===== hero ===== -->
+    <section class="win win--hero" id="top" aria-labelledby="hero-name" data-win>
+      <p class="win__title" aria-hidden="true"><span>daniel.exe</span></p>
+      <div class="win__body">
+        <h1 class="hero__name" id="hero-name">Daniel Molina</h1>
+        <p class="hero__role">Backend engineer. Java, Spring Boot, cloud, applied AI.</p>
+
+        <dl class="readout">
+          <div><dt>Now</dt><dd>TELUS recommendation engine, ~40M requests a month</dd></div>
+          <div><dt>Building</dt><dd>Rori, an AI tool that reviews medical records</dd></div>
+          <div><dt>Stack</dt><dd>Java, Spring Boot, GCP, AWS, Terraform</dd></div>
+          <div><dt>Location</dt><dd>Remote, UTC−6</dd></div>
+          <div><dt>Uptime</dt><dd>2 twins, 0 hours of sleep</dd></div>
+        </dl>
+
+        <p class="hero__bio">
+          I build backends that have to hold up under real traffic. By day that's Java and Spring
+          services at TELUS, where my team ships its own changes all the way to production. On my own
+          time I build AI products end to end, from the LLM pipeline to the Terraform underneath. Off
+          the keyboard I'm a dad of twin boys, I play drums and guitar, and I make 3D models when the
+          house is quiet.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn--default" href="cv.pdf" download="Kevin-Daniel-Molina-CV.pdf"><span>Download CV</span></a>
+          <a class="btn" href="mailto:daniel.97.molin@gmail.com"><span>Email me</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== work ===== -->
+    <section class="win win--work" id="work" aria-labelledby="work-title" data-win data-nav="work">
+      <p class="win__title" aria-hidden="true"><span>experience.txt</span></p>
+      <div class="win__body">
+        <h2 class="win__heading" id="work-title">Work</h2>
+
+        <article class="role">
+          <header class="role__bar">
+            <h3>TELUS Digital <span class="role__as">Backend Software Engineer</span></h3>
+            <span class="role__when">Jun 2022 – now</span>
+          </header>
+
+          <h4 class="role__sub">Recommendation engine <span>Mar 2025 – now</span></h4>
+          <ul>
+            <li>I develop and maintain TELUS's recommendation engine, built on the TM Forum TMF680 API, in Java and Spring Boot. It decides which offers and promotions TELUS and Koodo customers see for mobility and home services, at about 40M requests a month.</li>
+            <li>Built a new microservice for the company's real-time offers push. It pulls offers from a new upstream API, merges them with the regular catalog and ranks the result, so offers can react to what a customer just did.</li>
+            <li>There's no separate DevOps team, so I take my own tickets from code to Cloud Deploy releases on GKE and watch them in Dynatrace. I also cover on-call for Black Friday, Cyber Monday and the holidays.</li>
+          </ul>
+
+          <h4 class="role__sub">TELUS Health, claims adjudication <span>Feb 2023 – Mar 2025</span></h4>
+          <ul>
+            <li>Worked on the engine that decides every insurance claim for TELUS Health in Canada: eligibility, deductibles, coverage percentages. I learned Canadian insurance rules from zero and turned them into tested Java and Spring Boot services talking SOAP and REST to Oracle.</li>
+          </ul>
+
+          <h4 class="role__sub">Zimbra Collaboration Suite <span>Jun 2022 – Feb 2023</span></h4>
+          <ul>
+            <li>Built Java command-line tools that moved customers off third-party plugins and onto Zimbra's own native features.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <header class="role__bar">
+            <h3>Freelance <span class="role__as">Software Engineer</span></h3>
+            <span class="role__when">Feb 2026 – now</span>
+          </header>
+          <ul>
+            <li>Building Rori and the EOPLAT platform, both below. Contract work, from architecture to production.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <header class="role__bar">
+            <h3>Universidad de El Salvador <span class="role__as">Full Stack Developer &amp; Network Administrator</span></h3>
+            <span class="role__when">Sep 2020 – Jun 2022</span>
+          </header>
+          <ul>
+            <li>Kept a campus running: modernized its Java EE web systems and ran the networks, phones (Asterisk), DNS, mail, Moodle and Docker-hosted apps on Linux. Promoted from assistant to manager in July 2021.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== projects ===== -->
+    <div class="projects" id="projects">
+      <section class="win win--rori" aria-labelledby="rori-title" data-win data-nav="projects">
+        <p class="win__title" aria-hidden="true"><span>rori.app</span></p>
+        <div class="win__body">
+          <figure class="shot shot--logo">
+            <img src="assets/rori.jpg" alt="Rori logo: a teal magnifying-glass mark over the words AI-powered review of records" width="1254" height="877" loading="lazy" />
+          </figure>
+          <h2 class="win__heading" id="rori-title">Rori</h2>
+          <p class="lede">AI review of medical records, built with a physician co-founder and now in closed beta with a medical group.</p>
+          <p>
+            Doctors doing workers' compensation reviews get thousands of scanned pages per patient.
+            Rori splits them into individual records, dates and categorizes each one, and writes the
+            summaries. A 667-page test case comes back as 141 summarized records, with no failed calls.
+          </p>
+          <ul class="facts">
+            <li>Async pipeline on Java 25 virtual threads: Textract OCR, then LLM indexing and summaries, each checked by a second QA pass.</li>
+            <li>One LLM layer over Gemini, Claude and NVIDIA NIM, with retries, backoff and fallback to a second model when rate-limited.</li>
+            <li>Cut pipeline cost by 62%, to under $0.01 a page, with a model change and explicit context caching.</li>
+            <li>"Ask Rori" is a streaming chat agent that answers from the patient's records and cites them, and every citation is checked against records the user owns.</li>
+            <li>AWS with Terraform (ECS, Lambda, Aurora DSQL, Cognito, S3, KMS), GitHub Actions over OIDC, 700+ tests.</li>
+          </ul>
+          <p class="stack">Java, Spring Boot, Spring AI, React, TypeScript, Python, AWS, Vertex AI</p>
+          <div class="buttons">
+            <a class="btn" href="https://app.rori.health" target="_blank" rel="noopener noreferrer"><span>Open app.rori.health</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="win win--eoplat" aria-labelledby="eoplat-title" data-win data-nav="projects">
+        <p class="win__title" aria-hidden="true"><span>eoplat.org</span></p>
+        <div class="win__body">
+          <figure class="shot">
+            <img src="assets/eoplat.jpg" alt="EOPLAT home page: a group photo of missionaries holding certificates under the headline Descubriendo caminos innovadores" width="1280" height="800" loading="lazy" />
+          </figure>
+          <h2 class="win__heading" id="eoplat-title">EOPLAT</h2>
+          <p class="lede">A web platform for a nonprofit that sends missionaries across Latin America.</p>
+          <p>
+            Their site was a 9-year-old WordPress install. With one junior developer, I rebuilt it,
+            designed their new visual identity, and kept going when they asked for more.
+          </p>
+          <ul class="facts">
+            <li>Static Next.js site with Sanity CMS on Cloudflare Pages, plus a serverless AWS backend (Lambda, Cognito, DynamoDB, SST) for mission sign-ups.</li>
+            <li>A missionary management module the staff use daily: encrypted documents and alerts before passports and visas expire.</li>
+            <li>A private HumHub network for missionaries and donors, with accounts created on admin approval.</li>
+          </ul>
+          <p class="stack">Next.js, Sanity, AWS Lambda, Cognito, DynamoDB, SST</p>
+          <div class="buttons">
+            <a class="btn" href="https://eoplat.org" target="_blank" rel="noopener noreferrer"><span>Visit eoplat.org</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="win win--archive" aria-labelledby="archive-title" data-win data-nav="projects">
+        <p class="win__title" aria-hidden="true"><span>C:\ARCHIVE</span></p>
+        <div class="win__body">
+          <h2 class="win__heading" id="archive-title">Archive</h2>
+          <p class="archive__note">Earlier apps, now retired. WiMouse and Webcam4all reached about 150K downloads together, paid for by ads and Pro upgrades.</p>
+          <table class="listing">
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">What it did</th><th scope="col">Built with</th><th scope="col">Links</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">WIMOUSE</th>
+                <td data-label="What it did">Turned a phone into a touchpad, keyboard and media remote for any PC or Mac.</td>
+                <td data-label="Built with">React Native, Electron, WebSockets</td>
+                <td data-label="Links"><a href="https://github.com/daniel97molina/wimouse-website" target="_blank" rel="noopener noreferrer">source</a></td>
+              </tr>
+              <tr>
+                <th scope="row">WEBCAM4ALL</th>
+                <td data-label="What it did">Turned an Android phone into a 1080p wireless webcam, streamed over the local network.</td>
+                <td data-label="Built with">Android, HTTP streaming</td>
+                <td data-label="Links"><a href="https://github.com/daniel97molina/webcam4allSite" target="_blank" rel="noopener noreferrer">source</a></td>
+              </tr>
+              <tr>
+                <th scope="row">ECOLIB</th>
+                <td data-label="What it did">Library system for a private school, simple enough for its youngest students.</td>
+                <td data-label="Built with">React, Spring Boot, PostgreSQL</td>
+                <td data-label="Links"><span class="muted">private</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="listing__foot" aria-hidden="true">3 file(s)</p>
+        </div>
+      </section>
     </div>
-  </nav>
 
-  <main id="top">
-    <!-- ===================== HERO ===================== -->
-    <header class="hero">
-      <div class="terminal reveal" data-reveal>
-        <div class="terminal__bar">
-          <span class="dot dot--red"></span>
-          <span class="dot dot--amber"></span>
-          <span class="dot dot--green"></span>
-          <span class="terminal__title">kevin@portfolio: ~</span>
-        </div>
-        <div class="terminal__body">
-          <p class="term-line"><span class="prompt">$</span> whoami</p>
-          <h1 class="hero__name">Kevin&nbsp;Daniel Molina&nbsp;Ramírez</h1>
-          <p class="term-line"><span class="prompt">$</span> cat role.txt</p>
-          <p class="hero__role">
-            <span id="typed" aria-hidden="true"></span><span class="blink">▋</span>
-            <span class="sr-only">Full Stack Software Engineer</span>
-          </p>
-
-          <p class="hero__bio">
-            I'm a Salvadoran software engineer drawn to problems with real stakes — where uptime, data
-            integrity and a clean experience all have to hold at once. By day I build Java &amp; Spring
-            services on GCP at Telus International, currently on their recommendation engine. On the side
-            I design AI-powered products and ship them end to end on the cloud — most recently
-            <em>Rori</em>, an LLM-driven medical-records assistant. I'm increasingly focused where applied
-            AI meets solid cloud engineering: systems that are reliable, secure, and genuinely useful.
-          </p>
-
-          <p class="hero__status">
-            <span class="status-dot"></span>
-            <span class="mono">San Salvador, El Salvador</span>
-            <span class="sep">·</span>
-            <span class="mono">GMT−6</span>
-            <span class="sep">·</span>
-            <span class="mono">open to remote</span>
-          </p>
-
-          <div class="hero__links">
-            <a class="btn" href="mailto:daniel.97.molin@gmail.com">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg>
-              Email
-            </a>
-            <a class="btn" href="https://github.com/daniel97molina" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              GitHub
-            </a>
-            <a class="btn" href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
-              LinkedIn
-            </a>
+    <!-- ===== skills + credentials ===== -->
+    <div class="pair">
+      <section class="win win--dialog win--skills" id="skills" aria-labelledby="skills-title" data-win data-nav="skills">
+        <p class="win__title" aria-hidden="true"><span>Options</span></p>
+        <div class="win__body">
+          <h2 class="win__heading" id="skills-title">Skills</h2>
+          <div class="clusters">
+            <fieldset class="cluster">
+              <legend>Backend</legend>
+              <ul class="checks">
+                <li>Java</li><li>Spring Boot</li><li>Spring AI</li><li>Node.js</li><li>Express</li><li>REST &amp; SOAP</li><li>JUnit, Mockito</li>
+              </ul>
+            </fieldset>
+            <fieldset class="cluster">
+              <legend>Cloud</legend>
+              <ul class="checks">
+                <li>GCP (GKE, Vertex AI)</li><li>AWS (ECS, Lambda, S3)</li><li>Terraform</li><li>Docker</li><li>GitHub Actions</li><li>Dynatrace</li>
+              </ul>
+            </fieldset>
+            <fieldset class="cluster">
+              <legend>AI</legend>
+              <ul class="checks">
+                <li>LLM pipelines</li><li>RAG &amp; embeddings</li><li>Tool-calling agents</li><li>Context caching</li><li>Claude Code</li>
+              </ul>
+            </fieldset>
+            <fieldset class="cluster">
+              <legend>Data &amp; front</legend>
+              <ul class="checks">
+                <li>PostgreSQL</li><li>Redis</li><li>Oracle</li><li>DynamoDB</li><li>React</li><li>Next.js</li><li>TypeScript</li>
+              </ul>
+            </fieldset>
           </div>
         </div>
-      </div>
-    </header>
+      </section>
 
-    <!-- ===================== EXPERIENCE ===================== -->
-    <section id="experience" class="section">
-      <header class="section__head reveal" data-reveal>
-        <span class="section__path">~/experience</span>
-        <h2 class="section__title">Where I've worked</h2>
-      </header>
-
-      <div class="timeline">
-        <article class="role reveal" data-reveal>
-          <div class="role__meta">
-            <span class="role__dates mono">Jun 2022 — Present</span>
-            <span class="role__company">Telus International</span>
-          </div>
-          <div class="role__body">
-            <h3 class="role__title">Backend Software Engineer</h3>
-            <p class="role__summary">
-              Four years building production backend systems across three projects — most recently
-              Telus' recommendation engine. I work inside a Scrum team across the full
-              delivery cycle (design, code, test, document, integrate) alongside QA, architecture and
-              business stakeholders.
-            </p>
-            <ul class="role__points">
-              <li>Building and maintaining the recommendation engine's services on Java &amp; Spring, Node.js / Express, PostgreSQL on GCP.</li>
-              <li>Designed and shipped microservices for a large health-insurance platform, integrating systems over SOAP &amp; REST against Oracle.</li>
-              <li>Earlier, contributed to an open-source collaborative software suite and built tooling for its migration.</li>
-            </ul>
-            <ul class="tags mono">
-              <li>Java</li><li>Spring</li><li>GCP</li><li>PostgreSQL</li><li>Node.js</li><li>Express</li><li>REST &amp; SOAP</li><li>Oracle</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="role reveal" data-reveal>
-          <div class="role__meta">
-            <span class="role__dates mono">Jul 2021 — Jun 2022</span>
-            <span class="role__company">Universidad de El Salvador — FMOcc</span>
-          </div>
-          <div class="role__body">
-            <h3 class="role__title">Full Stack Developer · Servers &amp; Network Manager</h3>
-            <p class="role__summary">
-              Owned the faculty's web systems and the infrastructure underneath them — from Java EE
-              applications to the networks, servers and services the whole campus relied on.
-            </p>
-            <ul class="role__points">
-              <li>Maintained and updated web systems built with Java EE and JSP.</li>
-              <li>Ran internal &amp; external services: IP telephony (Asterisk), DNS, firewall, mail, Wi-Fi and dockerized apps.</li>
-              <li>Administered Moodle virtual classrooms and the campus networks end to end.</li>
-            </ul>
-            <ul class="tags mono">
-              <li>Java EE</li><li>JSP</li><li>MySQL</li><li>PostgreSQL</li><li>Docker</li><li>Asterisk</li><li>Linux</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="role reveal" data-reveal>
-          <div class="role__meta">
-            <span class="role__dates mono">Sep 2020 — Jun 2021</span>
-            <span class="role__company">Universidad de El Salvador — FMOcc</span>
-          </div>
-          <div class="role__body">
-            <h3 class="role__title">Full Stack Developer · Servers &amp; Network Assistant</h3>
-            <p class="role__summary">
-              Helped modernize legacy systems and keep critical campus services running while learning
-              the infrastructure ropes hands-on.
-            </p>
-            <ul class="role__points">
-              <li>Migrated and updated legacy web systems written in Java EE and JSP.</li>
-              <li>Configured and maintained IP telephony, security cameras, networks and Wi-Fi.</li>
-            </ul>
-            <ul class="tags mono">
-              <li>Java EE</li><li>JSP</li><li>PostgreSQL</li><li>Docker</li><li>Networking</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===================== SKILLS ===================== -->
-    <section id="skills" class="section">
-      <header class="section__head reveal" data-reveal>
-        <span class="section__path">~/skills</span>
-        <h2 class="section__title">Tools of the trade</h2>
-      </header>
-
-      <div class="skills-grid">
-        <div class="skill-card skill-card--accent reveal" data-reveal>
-          <h3><span class="prompt">//</span> AI &amp; LLMs</h3>
-          <ul class="tags mono">
-            <li>LLM application design</li><li>Agentic AI</li><li>RAG</li><li>Prompt engineering</li>
-            <li>AWS Bedrock (Claude)</li><li>Vertex AI (Gemini)</li><li>Document AI / OCR</li>
-            <li>Async LLM pipelines</li>
-          </ul>
+      <section class="win win--creds" aria-labelledby="creds-title" data-win data-nav="skills">
+        <p class="win__title" aria-hidden="true"><span>creds.txt</span></p>
+        <div class="win__body">
+          <h2 class="win__heading" id="creds-title">Credentials</h2>
+          <dl class="creds">
+            <dt>AWS Certified Cloud Practitioner</dt>
+            <dd>Valid through Apr 2027. <a href="https://www.credly.com/badges/57e0422d-8e5e-420a-80fd-6e138d0cc535" target="_blank" rel="noopener noreferrer">badge</a></dd>
+            <dt>Information Systems Engineering</dt>
+            <dd>Universidad de El Salvador, 2015–2019, graduated with honors</dd>
+            <dt>English C2, Spanish native</dt>
+            <dd>EF SET certified. <a href="https://www.efset.org/cert/E6ZjBV" target="_blank" rel="noopener noreferrer">certificate</a></dd>
+          </dl>
         </div>
-        <div class="skill-card reveal" data-reveal>
-          <h3><span class="prompt">//</span> Backend</h3>
-          <ul class="tags mono">
-            <li>Java</li><li>Spring Boot</li><li>Spring Framework</li><li>Node.js</li><li>Express</li>
-            <li>REST &amp; SOAP</li><li>JUnit</li><li>Mockito</li>
-          </ul>
+      </section>
+    </div>
+
+    <!-- ===== art ===== -->
+    <section class="win win--art" id="art" aria-labelledby="art-title" data-win data-nav="art">
+      <p class="win__title" aria-hidden="true"><span>3d-art.gal</span></p>
+      <div class="win__body">
+        <h2 class="win__heading" id="art-title">Off the clock: 3D</h2>
+        <p>I model in Blender and texture in Substance Painter, and sell the results on TurboSquid.</p>
+        <div class="gallery">
+          <figure><img src="assets/3d1.jpg" alt="Planet Earth from orbit, clouds over the Indian Ocean" width="747" height="420" loading="lazy" /></figure>
+          <figure><img src="assets/3d2.jpg" alt="A weathered red and white lighthouse standing in a park" width="747" height="420" loading="lazy" /></figure>
+          <figure><img src="assets/3d3.jpg" alt="A stone step pyramid with a temple on top, on a white background" width="747" height="420" loading="lazy" /></figure>
+          <figure><img src="assets/3d4.jpg" alt="A metal globe with raised green continents and rust on the oceans" width="747" height="420" loading="lazy" /></figure>
+          <figure><img src="assets/3d5.jpg" alt="A white and grey robot drone with two dark wing panels in an empty warehouse" width="747" height="420" loading="lazy" /></figure>
         </div>
-        <div class="skill-card reveal" data-reveal>
-          <h3><span class="prompt">//</span> Cloud &amp; DevOps</h3>
-          <ul class="tags mono">
-            <li>AWS</li><li>GCP</li><li>Terraform</li><li>SST</li>
-            <li>Docker</li><li>GitHub Actions</li><li>Linux</li>
-          </ul>
-        </div>
-        <div class="skill-card reveal" data-reveal>
-          <h3><span class="prompt">//</span> Frontend</h3>
-          <ul class="tags mono">
-            <li>React</li><li>React Native</li><li>TypeScript</li><li>Next.js</li>
-            <li>JavaScript</li><li>HTML &amp; CSS</li>
-          </ul>
-        </div>
-        <div class="skill-card reveal" data-reveal>
-          <h3><span class="prompt">//</span> Data</h3>
-          <ul class="tags mono">
-            <li>PostgreSQL</li><li>Aurora DSQL</li><li>Oracle</li><li>MySQL</li>
-            <li>MongoDB</li><li>DynamoDB</li><li>Sanity</li><li>Spring Data / JPA</li>
-          </ul>
-        </div>
-        <div class="skill-card reveal" data-reveal>
-          <h3><span class="prompt">//</span> Ways of working</h3>
-          <ul class="tags mono">
-            <li>Microservices</li><li>Serverless</li><li>Scrum</li><li>Git &amp; GitHub</li>
-            <li>CI/CD</li><li>Jira</li>
-          </ul>
+        <div class="buttons">
+          <a class="btn" href="https://www.turbosquid.com/Search/Artists/3-D-W-o-r-l-d" target="_blank" rel="noopener noreferrer"><span>See them on TurboSquid</span></a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== AI × CLOUD FOCUS ===================== -->
-    <section id="focus" class="section">
-      <header class="section__head reveal" data-reveal>
-        <span class="section__path">~/focus</span>
-        <h2 class="section__title">Where I'm headed: AI&nbsp;×&nbsp;cloud</h2>
-      </header>
-
-      <div class="focus-panel reveal" data-reveal>
-        <p class="focus-panel__lead">
-          My recent work lives at the intersection of applied AI and cloud engineering. With
-          <strong>Rori</strong> I built a production LLM pipeline end to end — OCR with AWS Textract,
-          then an indexing-and-summarization workflow over Claude (Bedrock) and Gemini (Vertex&nbsp;AI)
-          behind a provider-abstracted service with retry and fallback — running asynchronously on Java
-          virtual threads, fronted by a React/TypeScript app and backed by Terraform-managed AWS infra.
-          It's the direction I'm doubling down on: dependable, secure systems that put modern AI to real,
-          practical use.
-        </p>
-        <ul class="focus-chips mono">
-          <li>Production LLM pipelines</li>
-          <li>Multi-provider (Bedrock&nbsp;/&nbsp;Vertex)</li>
-          <li>Serverless on AWS</li>
-          <li>HIPAA-conscious by design</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===================== PROJECTS ===================== -->
-    <section id="projects" class="section">
-      <header class="section__head reveal" data-reveal>
-        <span class="section__path">~/projects</span>
-        <h2 class="section__title">Things I've built</h2>
-        <p class="section__lead">
-          A mix of client work and personal apps shipped end to end — backend, frontend and the
-          parts in between.
-        </p>
-      </header>
-
-      <div class="projects-grid">
-        <!-- Rori -->
-        <article class="card reveal" data-reveal>
-          <div class="card__media card__media--logo">
-            <img src="assets/rori.jpg" alt="Rori — AI-powered Review of Records" loading="lazy" />
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">Rori</h3>
-            <p class="card__desc">
-              An AI-powered medical <em>Review of Records</em> assistant. Doctors upload PDFs of patient
-              records; Rori runs OCR, indexes each individual record, and generates AI summaries tagged
-              by category and severity — through an async pipeline on Java virtual threads. The LLM layer
-              is provider-abstracted (Claude on Bedrock, Gemini on Vertex&nbsp;AI) with retry and fallback,
-              and it's built HIPAA-conscious from the ground up: per-user data isolation, in-memory
-              tokens, and no PHI in logs.
-            </p>
-            <ul class="tags mono">
-              <li>Java</li><li>Spring Boot</li><li>React</li><li>TypeScript</li><li>Python</li>
-              <li>AWS Bedrock</li><li>Vertex AI</li><li>Textract</li><li>Aurora DSQL</li><li>Terraform</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- EOPLAT -->
-        <article class="card reveal" data-reveal>
-          <div class="card__media">
-            <img src="assets/eoplat.jpg" alt="EOPLAT website" loading="lazy" />
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">EOPLAT website</h3>
-            <p class="card__desc">
-              A full rebuild for EOPLAT (Eagles of Peace Latinoamérica), a Guatemalan missionary NGO —
-              migrating a 9-year-old WordPress site to a modern stack. A statically-exported Next.js site
-              with a Sanity headless CMS, fronting a serverless AWS backend (Lambda&nbsp;+&nbsp;Cognito) that
-              powers mission-enrollment and a role-based admin dashboard. Deployed on Cloudflare Pages and
-              engineered to run at near-zero hosting cost.
-            </p>
-            <ul class="tags mono">
-              <li>Next.js</li><li>React</li><li>Sanity</li><li>AWS Lambda</li><li>Cognito</li>
-              <li>SST</li><li>Cloudflare Pages</li>
-            </ul>
-            <div class="card__links">
-              <!-- TODO: swap in the production domain (eoplat.org) once live -->
-              <a href="https://eoplat-test.pages.dev/" target="_blank" rel="noopener noreferrer">Live preview ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- WiMouse (consolidated) -->
-        <article class="card reveal" data-reveal>
-          <div class="card__media">
-            <img src="assets/wimouse.jpg" alt="WiMouse remote control app" loading="lazy" />
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">WiMouse</h3>
-            <p class="card__desc">
-              An all-in-one remote control for your computer: a precise touchpad, media keys and a full
-              keyboard, all from your phone. A cross-platform desktop server receives the input events
-              over WebSockets and executes them locally. Designed to be effortless to set up.
-            </p>
-            <ul class="tags mono">
-              <li>React Native</li><li>Node.js</li><li>Electron</li><li>WebSockets</li><li>RobotJS</li>
-            </ul>
-            <div class="card__links">
-              <a href="https://play.google.com/store/apps/details?id=dev.studios503.wimouse" target="_blank" rel="noopener noreferrer">Google&nbsp;Play ↗</a>
-              <a href="https://apps.apple.com/us/app/wimouse-remote-control/id1583106552" target="_blank" rel="noopener noreferrer">App&nbsp;Store ↗</a>
-              <a href="https://wimouse.web.app/" target="_blank" rel="noopener noreferrer">Website ↗</a>
-              <a href="https://github.com/daniel97molina/wimouse-website" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Webcam4all (consolidated) -->
-        <article class="card reveal" data-reveal>
-          <div class="card__media">
-            <img src="assets/w4a1.jpg" alt="Webcam4all app" loading="lazy" />
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">Webcam4all</h3>
-            <p class="card__desc">
-              An Android app that turns a phone into a 1080p wireless webcam for Windows or macOS. It
-              captures each frame, encodes it to JPEG and streams it over the local network via HTTP.
-              The real challenge: a low-latency, fault-tolerant stream that still looks sharp.
-            </p>
-            <ul class="tags mono">
-              <li>Android</li><li>React</li><li>HTTP streaming</li>
-            </ul>
-            <div class="card__links">
-              <a href="https://play.google.com/store/apps/details?id=dm.camera.webcamxipcamera" target="_blank" rel="noopener noreferrer">Google&nbsp;Play ↗</a>
-              <a href="https://webcam4all.surge.sh/" target="_blank" rel="noopener noreferrer">Website ↗</a>
-              <a href="https://github.com/daniel97molina/webcam4allSite" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-                <!-- ECO Library -->
-        <article class="card reveal" data-reveal>
-          <div class="card__media">
-            <video src="assets/eco-library.mp4" poster="assets/eco-library-poster.jpg"
-                   autoplay loop muted playsinline preload="metadata"
-                   aria-label="ECO Library demo"></video>
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">ECO Library</h3>
-            <p class="card__desc">
-              A library management system built for a private school. Students search the catalog with
-              rich filters and log media usage; administrators manage books, authors, publishers, tags,
-              loans and reports. The hard part was keeping it intuitive enough for the youngest students
-              without sacrificing depth for the staff.
-            </p>
-            <ul class="tags mono">
-              <li>React</li><li>Spring Boot</li><li>Spring Data</li><li>JWT</li><li>JasperReports</li><li>PostgreSQL</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- This site -->
-        <article class="card reveal" data-reveal>
-          <div class="card__media">
-            <img src="assets/this-site.jpg" alt="This portfolio website" loading="lazy" />
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">This site</h3>
-            <p class="card__desc">
-              The page you're reading. A hand-built, dependency-free portfolio that doubles as a
-              printable CV — save it straight to PDF and the dark theme comes along for the ride.
-            </p>
-            <ul class="tags mono">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li>
-            </ul>
-            <div class="card__links">
-              <a href="https://github.com/daniel97molina/dm-portfolio" target="_blank" rel="noopener noreferrer">Source ↗</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===================== 3D ART ===================== -->
-    <section id="art" class="section">
-      <header class="section__head reveal" data-reveal>
-        <span class="section__path">~/3d-art</span>
-        <h2 class="section__title">Off the clock: 3D art</h2>
-        <p class="section__lead">
-          When I'm not writing code, I model. I sculpt and texture in Blender and Substance Painter
-          (Cinema 4D in a past life) and sell the results on TurboSquid.
-        </p>
-      </header>
-
-      <div class="gallery reveal" data-reveal>
-        <figure><img src="assets/3d1.jpg" alt="3D render 1" loading="lazy" /></figure>
-        <figure><img src="assets/3d2.jpg" alt="3D render 2" loading="lazy" /></figure>
-        <figure><img src="assets/3d3.jpg" alt="3D render 3" loading="lazy" /></figure>
-        <figure><img src="assets/3d4.jpg" alt="3D render 4" loading="lazy" /></figure>
-        <figure><img src="assets/3d5.jpg" alt="3D render 5" loading="lazy" /></figure>
-      </div>
-      <p class="gallery__cta reveal" data-reveal>
-        <a href="https://www.turbosquid.com/Search/Artists/3-D-W-o-r-l-d" target="_blank" rel="noopener noreferrer">See the collection on TurboSquid ↗</a>
-      </p>
-    </section>
-
-    <!-- ===================== EDUCATION ===================== -->
-    <section id="education" class="section">
-      <header class="section__head reveal" data-reveal>
-        <span class="section__path">~/education</span>
-        <h2 class="section__title">Education &amp; credentials</h2>
-      </header>
-
-      <div class="edu-grid">
-        <article class="edu-card reveal" data-reveal>
-          <h3>Information Systems Engineering</h3>
-          <p class="edu-card__org">Universidad de El Salvador</p>
-          <p class="edu-card__meta mono">2015 — 2019 · Graduated with honors</p>
-        </article>
-        <article class="edu-card reveal" data-reveal>
-          <h3>AWS Partner: Technical Accreditation</h3>
-          <p class="edu-card__org">Amazon Web Services Training &amp; Certification</p>
-          <p class="edu-card__meta mono">
-            <a href="https://www.credly.com/badges/4ff8043b-5e8a-433c-b269-e1dfc25b5f2b" target="_blank" rel="noopener noreferrer">View badge ↗</a>
-          </p>
-        </article>
-        <article class="edu-card reveal" data-reveal>
-          <h3>English — C2 Proficient</h3>
-          <p class="edu-card__org">EF SET Certificate · Native Spanish</p>
-          <p class="edu-card__meta mono">
-            <a href="https://www.efset.org/cert/E6ZjBV" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===================== CONTACT ===================== -->
-    <footer id="contact" class="contact">
-      <div class="reveal" data-reveal>
-        <span class="section__path">~/contact</span>
-        <h2 class="contact__title">Let's build something</h2>
-        <p class="contact__lead">
-          Open to interesting full-stack work and collaborations. The fastest way to reach me is email.
-        </p>
-        <div class="contact__links">
-          <a class="btn btn--lg" href="mailto:daniel.97.molin@gmail.com">daniel.97.molin@gmail.com</a>
-          <a class="btn btn--lg" href="https://github.com/daniel97molina" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="btn btn--lg" href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <!-- ===== contact ===== -->
+    <section class="win win--dialog win--contact" id="contact" aria-labelledby="contact-title" data-win data-nav="contact">
+      <p class="win__title" aria-hidden="true"><span>Confirm</span></p>
+      <div class="win__body">
+        <h2 class="contact__q" id="contact-title">Hire Daniel?</h2>
+        <p>I'm open to remote and contract roles with US and Canadian teams, mostly senior backend work, and AI engineering too. Email is the fastest way to reach me.</p>
+        <p class="contact__mail"><a href="mailto:daniel.97.molin@gmail.com">daniel.97.molin@gmail.com</a></p>
+        <div class="buttons buttons--center">
+          <a class="btn btn--default" href="mailto:daniel.97.molin@gmail.com"><span>Yes, email</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span></a>
+          <a class="btn" href="https://github.com/daniel97molina" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
         </div>
-        <p class="contact__foot mono">
-          San Salvador, El Salvador · GMT−6 · open to remote &nbsp;—&nbsp; built from scratch, no frameworks.
-        </p>
       </div>
-    </footer>
+    </section>
+
+    <p class="credits">Built by hand: HTML, CSS and a little JavaScript. Type: IBM VGA 8x16 by VileR (CC BY-SA 4.0) and Atkinson Hyperlegible.</p>
   </main>
+
+  <!-- ===== status line ===== -->
+  <footer class="statusline">
+    <p class="statusline__keys" aria-hidden="true">
+      <span><b>W</b> Work</span><span><b>P</b> Projects</span><span><b>S</b> Skills</span><span><b>A</b> Art</span><span><b>C</b> Contact</span>
+    </p>
+    <p class="statusline__where">Remote, UTC−6</p>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

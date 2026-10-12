@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Kevin Daniel Molina Ramírez — CV</title>
+  <meta name="author" content="Kevin Daniel Molina Ramírez" />
+  <meta name="description" content="CV of Kevin Daniel Molina Ramírez, Backend Software Engineer (Java, Spring Boot, cloud, applied AI)." />
+  <style>
+    /*
+      ATS-first layout: one column, real text, standard headings, no tables,
+      no icons, no text in images. Ligatures are off so "fi"/"fl" extract as
+      plain letters in every parser.
+    */
+    :root {
+      --ink: #14181f;
+      --muted: #4a5466;
+      --accent: #1b3d7a;
+      --rule: #c9d2e3;
+    }
+    * { box-sizing: border-box; }
+    html { background: #e9edf3; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
+      font-size: 10.3pt;
+      line-height: 1.32;
+      font-variant-ligatures: none;
+      font-feature-settings: "liga" 0, "clig" 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      max-width: 8.5in;
+      margin: 24px auto;
+      padding: 0.55in 0.6in;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(20, 24, 31, .12);
+    }
+    a { color: inherit; text-decoration: none; }
+
+    header h1 {
+      margin: 0;
+      font-size: 21pt;
+      line-height: 1.1;
+      color: var(--accent);
+    }
+    .headline { margin: 3pt 0 5pt; font-size: 11.5pt; font-weight: 700; }
+    .contact { margin: 0; color: var(--muted); font-size: 9.8pt; }
+    .contact span + span::before { content: " | "; color: var(--rule); }
+
+    h2 {
+      margin: 10pt 0 4pt;
+      padding-bottom: 2pt;
+      border-bottom: 1.2pt solid var(--accent);
+      color: var(--accent);
+      font-size: 11pt;
+      text-transform: uppercase;
+      break-after: avoid;
+    }
+    p { margin: 0 0 4pt; }
+
+    .job { margin-bottom: 7pt; }
+    .job-head { display: flex; justify-content: space-between; gap: 12pt; align-items: baseline; break-after: avoid; }
+    .job-head h3 { margin: 0; font-size: 10.8pt; }
+    .job-head .dates { white-space: nowrap; font-weight: 700; }
+    .org { margin: 0 0 3pt; color: var(--muted); font-style: italic; }
+
+    h4 {
+      margin: 5pt 0 1.5pt;
+      font-size: 10.2pt;
+      break-after: avoid;
+    }
+    h4 .when { font-weight: 400; color: var(--muted); }
+
+    ul { margin: 0 0 3pt; padding-left: 14pt; }
+    li { margin-bottom: 1.5pt; }
+    li::marker { color: var(--accent); }
+
+    .skills p { margin-bottom: 2.5pt; }
+    .skills strong, .plain strong { color: var(--ink); }
+
+    @page { size: Letter; margin: 0.4in 0.55in; }
+    @media print {
+      html { background: #fff; }
+      .page { margin: 0; padding: 0; max-width: none; box-shadow: none; }
+      li, .job-head, .org { break-inside: avoid; }
+      .org { break-after: avoid; }
+    }
+    @media (max-width: 640px) {
+      .page { margin: 0; padding: 20px 16px; box-shadow: none; }
+      .job-head { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <h1>Kevin Daniel Molina Ramírez</h1>
+    <p class="headline">Backend Software Engineer · Java, Spring Boot, Cloud, Applied AI</p>
+    <p class="contact">
+      <span>Remote · Central Time (UTC−6)</span>
+      <span>+503 6937 4560</span>
+      <span><a href="mailto:daniel.97.molin@gmail.com">daniel.97.molin@gmail.com</a></span>
+    </p>
+    <p class="contact">
+      <span><a href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175">linkedin.com/in/kevin-daniel-molina-ramírez-bba002175</a></span>
+      <span><a href="https://github.com/daniel97molina">github.com/daniel97molina</a></span>
+      <span><a href="https://danielmolina.pages.dev">danielmolina.pages.dev</a></span>
+    </p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>
+      Backend engineer with 6 years of experience, the last 4 building Java and Spring Boot services at
+      TELUS, where I now work on a recommendation engine handling about 40 million requests a month.
+      With no separate DevOps team, I take my own changes from design to production on GCP. Outside my
+      day job I build applied-AI products end to end, most recently Rori, an LLM pipeline for
+      medical-records review on AWS and Vertex AI. Available for remote and contract roles with US and
+      Canadian teams.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Backend Software Engineer</h3>
+        <span class="dates">Jun 2022 – Present</span>
+      </div>
+      <p class="org">TELUS Digital (formerly TELUS International) · Remote</p>
+
+      <h4>Recommendation engine <span class="when">· Mar 2025 – Present</span></h4>
+      <ul>
+        <li>Develop and maintain TELUS's recommendation engine, built on the TM Forum TMF680 Recommendation API, and its supporting services in Java and Spring Boot. It serves offers and promotions to TELUS and Koodo customers for mobility and home services, at about 40M requests a month.</li>
+        <li>Built a new microservice for the company-wide real-time offers initiative. It calls a new upstream offers API, merges those offers with the regular catalog and ranks the combined list, so customers get offers that react to recent events and usage.</li>
+        <li>Support the legacy Java stack and the newer Node.js/Express services (PostgreSQL, Redis, GKE on GCP) in a team of about 20, owning tickets from development through Cloud Deploy releases and Dynatrace monitoring.</li>
+        <li>Joined the on-call rotation for peak sales events (Black Friday, Cyber Monday, holidays), monitoring, triaging and debugging production issues and following up with hardening work.</li>
+      </ul>
+
+      <h4>TELUS Health, claims adjudication <span class="when">· Feb 2023 – Mar 2025</span></h4>
+      <ul>
+        <li>Worked on the claims adjudication engine for TELUS Health in Canada, the system that applies business rules to every insurance claim to determine eligibility, deductibles and coverage percentages.</li>
+        <li>Developed and maintained Java and Spring Boot microservices integrated over SOAP and REST (Oracle, LDAP, AWS). Learned Canadian insurance rules on the job and worked with analysts, architects and QA to turn them into tested code (JUnit, Mockito).</li>
+      </ul>
+
+      <h4>Zimbra Collaboration Suite <span class="when">· Jun 2022 – Feb 2023</span></h4>
+      <ul>
+        <li>Built a set of Java command-line migration tools for Zimbra, an open-source email and collaboration suite, so customers could move from third-party plugins to Zimbra's own native features.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Freelance Software Engineer</h3>
+        <span class="dates">Feb 2026 – Present</span>
+      </div>
+      <p class="org">Self-employed · Remote</p>
+
+      <h4>Rori, AI review of medical records <span class="when">· app.rori.health</span></h4>
+      <ul>
+        <li>Designed and built the whole platform as the sole engineer, with a physician co-founder providing the medical expertise. Rori turns thousands of pages of scanned records into dated, categorized summaries for California workers' compensation reviews; now in closed beta with a medical group.</li>
+        <li>Built an asynchronous processing pipeline on Java 25 virtual threads: Textract OCR, LLM indexing in batches, then per-record summaries, each step checked by a second QA pass. A 667-page production test produced 141 records from 477 model calls, with no failures.</li>
+        <li>Wrote a provider-agnostic LLM layer (Gemini on Vertex AI, Claude on Amazon Bedrock, NVIDIA NIM) with retries, exponential backoff and per-call fallback to a second model when rate-limited.</li>
+        <li>Cut pipeline cost by 62%, to under $0.01 per page, by changing the primary model and adding explicit context caching shared between each step and its QA pass.</li>
+        <li>Built "Ask Rori", a streaming tool-calling chat agent that answers from the record index, summaries, full records and RAG over embeddings in Amazon S3 Vectors, with every citation verified against the patient's records.</li>
+        <li>Provisioned the AWS infrastructure with Terraform (14 modules): ECS, Lambda (Python), Aurora DSQL, Cognito, S3 and KMS, with GitHub Actions CI/CD over OIDC and 700+ automated tests. Every query is scoped to its owner, record access is audit-logged, and no patient data reaches the logs.</li>
+      </ul>
+
+      <h4>EOPLAT, web platform for a missionary nonprofit <span class="when">· eoplat.org · May 2026 – Present</span></h4>
+      <ul>
+        <li>Led a two-person team that replaced the organization's 9-year-old WordPress site, owning architecture, infrastructure and the new visual identity: a static Next.js site with Sanity CMS on Cloudflare Pages and a serverless AWS backend (Lambda, API Gateway, Cognito, DynamoDB, SST) for mission enrollment and admin review.</li>
+        <li>Built a missionary management module now used by the staff: profiles, encrypted document storage (S3 with KMS) and automatic expiry alerts for passports and visas (EventBridge Scheduler, SES).</li>
+        <li>Set up a private community network for missionaries and donors on HumHub, with accounts created automatically when an admin approves a request in the platform.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Full Stack Developer &amp; Network Administrator</h3>
+        <span class="dates">Sep 2020 – Jun 2022</span>
+      </div>
+      <p class="org">Universidad de El Salvador, Western Campus (FMOcc)</p>
+      <ul>
+        <li>Maintained and modernized the campus web systems built on Java EE and JSP, including migrating legacy applications.</li>
+        <li>Ran the campus infrastructure: networks and Wi-Fi, IP telephony (Asterisk), DNS, firewall, mail, Moodle and Docker-hosted internal apps on Linux.</li>
+        <li>Promoted from assistant to Servers &amp; Network Manager in July 2021.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Earlier Projects</h2>
+    <ul>
+      <li><strong>WiMouse and Webcam4all.</strong> Two freemium consumer apps I built and published: a phone-as-remote-control app (React Native, Electron, WebSockets) on Google Play and the App Store, and an Android app that turns a phone into a 1080p wireless webcam. About 150K downloads combined, monetized with ads and Pro upgrades; both since retired.</li>
+    </ul>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Java, TypeScript, JavaScript, Python, SQL</p>
+    <p><strong>Backend:</strong> Spring Boot, Spring Framework, Spring AI, Spring Data JPA, Node.js, Express, REST, SOAP, microservices, JUnit, Mockito</p>
+    <p><strong>Cloud and DevOps:</strong> AWS (IAM, ECS, Lambda, S3, Cognito, Textract, Bedrock, Aurora DSQL, DynamoDB, KMS), GCP (Vertex AI, GKE, Cloud Deploy, IAM, Secret Manager), Terraform, SST, Docker, GitHub Actions, CI/CD, Dynatrace, Linux</p>
+    <p><strong>AI and LLMs:</strong> LLM pipelines, RAG, embeddings, tool-calling agents, prompt engineering, context caching, Gemini, Claude, AI-assisted development (Claude Code)</p>
+    <p><strong>Data:</strong> PostgreSQL, Redis, Oracle, DynamoDB, Aurora DSQL</p>
+    <p><strong>Frontend:</strong> React, Next.js, React Native, HTML, CSS, Tailwind CSS</p>
+  </section>
+
+  <section class="plain">
+    <h2>Certifications</h2>
+    <p><strong>AWS Certified Cloud Practitioner</strong>, Amazon Web Services · Apr 2024, valid through Apr 2027</p>
+  </section>
+
+  <section class="plain">
+    <h2>Education</h2>
+    <p><strong>Bachelor's Degree, Information Systems Engineering</strong>, Universidad de El Salvador · 2015 – 2019 · Graduated with honors</p>
+  </section>
+
+  <section class="plain">
+    <h2>Languages</h2>
+    <p>English: C2 Proficient (EF SET certified) · Spanish: Native</p>
+  </section>
+
+</main>
+</body>
+</html>

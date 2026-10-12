@@ -1,35 +1,34 @@
-# Portfolio — Kevin Daniel Molina Ramírez
+# Portfolio — Daniel Molina
 
-My personal portfolio, which doubles as a printable CV. Hand-built with no frameworks and no
-build step — just HTML, CSS and a little vanilla JavaScript.
+My portfolio and CV. Hand-built with no frameworks and no build step: HTML, CSS and a little
+vanilla JavaScript.
 
-**Live:** https://danielmolina.surge.sh/
+**Live:** https://danielmolina.pages.dev/
 
-## Highlights
-
-- **Dark "terminal, refined" aesthetic** — Fraunces + JetBrains Mono + Hanken Grotesk, an amber/teal
-  palette, subtle grain and glow, and a few tasteful dev easter eggs (try the Konami code).
-- **Save-as-PDF flow** — a dedicated print stylesheet keeps the dark theme and lays the page out as a
-  clean PDF (`Ctrl/Cmd + P` → *Save as PDF*; leave "Background graphics" on).
-- **Zero dependencies** — fonts are the only external request.
+- `index.html` is the portfolio: a Turbo Vision-style DOS desktop in the CGA palette. The window
+  you're reading gets the double frame. W/P/S/A/C jump between sections, and there's a Konami code.
+- `cv.html` is the ATS-friendly CV (one column, standard headings). `cv.pdf` is generated from it.
 
 ## Structure
 
 ```
-index.html        # all content & structure
-css/styles.css    # theme, layout, animations, print stylesheet
-js/main.js        # typed headline, scroll reveals, easter eggs
-assets/           # project images, 3D renders, ECO Library demo video
+index.html        # portfolio content & structure
+cv.html / cv.pdf  # the CV and its PDF
+css/styles.css    # theme, layout, responsive and print rules
+js/main.js        # active window tracking, hotkeys, Konami code
+fonts/            # self-hosted IBM VGA 8x16 and Atkinson Hyperlegible (see fonts/LICENSES.md)
+assets/           # project screenshots and 3D renders
 ```
 
-## Run locally
+## Regenerate the CV PDF
 
-Just open `index.html` in a browser — no server required.
+```bash
+"/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --no-pdf-header-footer \
+  --print-to-pdf=cv.pdf cv.html
+```
+
+Keep it at 2 pages, and check the text with `pdftotext -enc UTF-8 cv.pdf -`.
 
 ## Deploy
 
-Static hosting of choice. To publish to surge:
-
-```bash
-npx surge . danielmolina.surge.sh
-```
+Cloudflare Pages deploys `main` automatically through its Git integration.
