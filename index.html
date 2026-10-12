@@ -16,291 +16,481 @@
   <link rel="preload" href="fonts/ibm-vga-8x16.woff" as="font" type="font/woff" crossorigin />
   <link rel="preload" href="fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230000aa'/%3E%3Crect x='3' y='11' width='8' height='2' fill='%23ffff55'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23aaaaaa'/%3E%3Crect width='16' height='5' fill='%230000aa'/%3E%3Crect x='3' y='8' width='10' height='2' fill='%230000aa'/%3E%3Crect x='3' y='12' width='6' height='2' fill='%230000aa'/%3E%3C/svg%3E" />
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#content">Skip to content</a>
 
-  <!-- ===== menu bar ===== -->
-  <header class="menubar">
-    <nav class="menubar__nav" aria-label="Sections">
-      <a class="menubar__brand" href="#top" aria-label="Back to top">≡</a>
-      <a href="#work" data-key="w"><span class="hk">W</span>ork</a>
-      <a href="#projects" data-key="p"><span class="hk">P</span>rojects</a>
-      <a href="#skills" data-key="s"><span class="hk">S</span>kills</a>
-      <a href="#art" data-key="a"><span class="hk">A</span>rt</a>
-      <a href="#contact" data-key="c"><span class="hk">C</span>ontact</a>
-    </nav>
-    <a class="menubar__cv" href="cv.pdf" download="Kevin-Daniel-Molina-CV.pdf">CV.PDF</a>
-  </header>
+  <div class="bios" id="bios">
 
-  <main id="main" class="desktop">
-
-    <!-- ===== hero ===== -->
-    <section class="win win--hero" id="top" aria-labelledby="hero-name" data-win>
-      <p class="win__title" aria-hidden="true"><span>daniel.exe</span></p>
-      <div class="win__body">
-        <h1 class="hero__name" id="hero-name">Daniel Molina</h1>
-        <p class="hero__role">Backend engineer. Java, Spring Boot, cloud, applied AI.</p>
-
-        <dl class="readout">
-          <div><dt>Now</dt><dd>TELUS recommendation engine, ~40M requests a month</dd></div>
-          <div><dt>Building</dt><dd>Rori, an AI tool that reviews medical records</dd></div>
-          <div><dt>Stack</dt><dd>Java, Spring Boot, GCP, AWS, Terraform</dd></div>
-          <div><dt>Location</dt><dd>Remote, UTC−6</dd></div>
-          <div><dt>Uptime</dt><dd>2 twins, 0 hours of sleep</dd></div>
-        </dl>
-
-        <p class="hero__bio">
-          I build backends that have to hold up under real traffic. By day that's Java and Spring
-          services at TELUS, where my team ships its own changes all the way to production. On my own
-          time I build AI products end to end, from the LLM pipeline to the Terraform underneath. Off
-          the keyboard I'm a dad of twin boys, I play drums and guitar, and I make 3D models when the
-          house is quiet.
-        </p>
-
-        <div class="buttons">
-          <a class="btn btn--default" href="cv.pdf" download="Kevin-Daniel-Molina-CV.pdf"><span>Download CV</span></a>
-          <a class="btn" href="mailto:daniel.97.molin@gmail.com"><span>Email me</span></a>
+    <!-- ===== title + menu tabs ===== -->
+    <header class="top">
+      <p class="top__title">DM BIOS Setup Utility <span>v6.0</span></p>
+      <nav class="tabs" aria-label="Setup menus">
+        <div class="tabs__strip">
+          <a href="#main" data-tab>Main</a>
+          <a href="#experience" data-tab>Experience</a>
+          <a href="#projects" data-tab>Projects</a>
+          <a href="#skills" data-tab>Skills</a>
+          <a href="#art" data-tab>Art</a>
+          <a href="#boot" data-tab>Boot</a>
+          <a href="#exit" data-tab>Exit</a>
         </div>
-      </div>
-    </section>
+        <a class="tabs__cv" href="cv.pdf" download="Kevin-Daniel-Molina-CV.pdf">CV.PDF</a>
+      </nav>
+    </header>
 
-    <!-- ===== work ===== -->
-    <section class="win win--work" id="work" aria-labelledby="work-title" data-win data-nav="work">
-      <p class="win__title" aria-hidden="true"><span>experience.txt</span></p>
-      <div class="win__body">
-        <h2 class="win__heading" id="work-title">Work</h2>
+    <main id="content">
 
-        <article class="role">
-          <header class="role__bar">
-            <h3>TELUS Digital <span class="role__as">Backend Software Engineer</span></h3>
-            <span class="role__when">Jun 2022 – now</span>
-          </header>
+      <!-- ===== Main ===== -->
+      <section class="screen" id="main" aria-labelledby="name">
+        <p class="screen__title" aria-hidden="true">System Overview</p>
+        <div class="panel">
+          <h1 class="name" id="name">Daniel Molina</h1>
+          <p class="role">Backend software engineer. Java, Spring Boot, cloud, applied AI.</p>
 
-          <h4 class="role__sub">Recommendation engine <span>Mar 2025 – now</span></h4>
-          <ul>
-            <li>I develop and maintain TELUS's recommendation engine, built on the TM Forum TMF680 API, in Java and Spring Boot. It decides which offers and promotions TELUS and Koodo customers see for mobility and home services, at about 40M requests a month.</li>
-            <li>Built a new microservice for the company's real-time offers push. It pulls offers from a new upstream API, merges them with the regular catalog and ranks the result, so offers can react to what a customer just did.</li>
-            <li>There's no separate DevOps team, so I take my own tickets from code to Cloud Deploy releases on GKE and watch them in Dynatrace. I also cover on-call for Black Friday, Cyber Monday and the holidays.</li>
-          </ul>
+          <dl class="rows">
+            <div class="row item" data-help="My local time. UTC−6 all year, which overlaps with US and Canadian working hours.">
+              <dt>System Time</dt><dd>[<span data-clock="time">--:--:--</span>] UTC−6</dd>
+            </div>
+            <div class="row item" data-help="Today, as far as this BIOS knows.">
+              <dt>System Date</dt><dd>[<span data-clock="date">--/--/----</span>]</dd>
+            </div>
+            <div class="row item" data-help="My day job at TELUS Digital. Details stay general: it's a telecom and most of the work is private.">
+              <dt>Now</dt><dd>TELUS recommendation engine, ~40M requests a month</dd>
+            </div>
+            <div class="row item" data-help="My side company. The Projects menu has the full story.">
+              <dt>Building</dt><dd>Rori, an AI tool that reviews medical records</dd>
+            </div>
+            <div class="row item" data-help="What I reach for first. The Skills menu has the full list.">
+              <dt>Stack</dt><dd>Java, Spring Boot, GCP, AWS, Terraform</dd>
+            </div>
+            <div class="row item" data-help="Remote only. Contract roles are fine too.">
+              <dt>Location</dt><dd>Remote, UTC−6</dd>
+            </div>
+            <div class="row item" data-help="Twin boys. This value has not changed since they were born.">
+              <dt>Uptime</dt><dd>2 twins, 0 hours of sleep</dd>
+            </div>
+          </dl>
 
-          <h4 class="role__sub">TELUS Health, claims adjudication <span>Feb 2023 – Mar 2025</span></h4>
-          <ul>
-            <li>Worked on the engine that decides every insurance claim for TELUS Health in Canada: eligibility, deductibles, coverage percentages. I learned Canadian insurance rules from zero and turned them into tested Java and Spring Boot services talking SOAP and REST to Oracle.</li>
-          </ul>
-
-          <h4 class="role__sub">Zimbra Collaboration Suite <span>Jun 2022 – Feb 2023</span></h4>
-          <ul>
-            <li>Built Java command-line tools that moved customers off third-party plugins and onto Zimbra's own native features.</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <header class="role__bar">
-            <h3>Freelance <span class="role__as">Software Engineer</span></h3>
-            <span class="role__when">Feb 2026 – now</span>
-          </header>
-          <ul>
-            <li>Building Rori and the EOPLAT platform, both below. Contract work, from architecture to production.</li>
-          </ul>
-        </article>
-
-        <article class="role">
-          <header class="role__bar">
-            <h3>Universidad de El Salvador <span class="role__as">Full Stack Developer &amp; Network Administrator</span></h3>
-            <span class="role__when">Sep 2020 – Jun 2022</span>
-          </header>
-          <ul>
-            <li>Kept a campus running: modernized its Java EE web systems and ran the networks, phones (Asterisk), DNS, mail, Moodle and Docker-hosted apps on Linux. Promoted from assistant to manager in July 2021.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== projects ===== -->
-    <div class="projects" id="projects">
-      <section class="win win--rori" aria-labelledby="rori-title" data-win data-nav="projects">
-        <p class="win__title" aria-hidden="true"><span>rori.app</span></p>
-        <div class="win__body">
-          <figure class="shot shot--logo">
-            <img src="assets/rori.jpg" alt="Rori logo: a teal magnifying-glass mark over the words AI-powered review of records" width="1254" height="877" loading="lazy" />
-          </figure>
-          <h2 class="win__heading" id="rori-title">Rori</h2>
-          <p class="lede">AI review of medical records, built with a physician co-founder and now in closed beta with a medical group.</p>
-          <p>
-            Doctors doing workers' compensation reviews get thousands of scanned pages per patient.
-            Rori splits them into individual records, dates and categorizes each one, and writes the
-            summaries. A 667-page test case comes back as 141 summarized records, with no failed calls.
+          <p class="prose">
+            I build backends that have to hold up under real traffic. By day that's Java and Spring
+            services at TELUS, where my team ships its own changes all the way to production. On my own
+            time I build AI products end to end, from the LLM pipeline to the Terraform underneath. Off
+            the keyboard I'm a dad of twin boys, I play drums and guitar, and I make 3D models when the
+            house is quiet.
           </p>
-          <ul class="facts">
-            <li>Async pipeline on Java 25 virtual threads: Textract OCR, then LLM indexing and summaries, each checked by a second QA pass.</li>
-            <li>One LLM layer over Gemini, Claude and NVIDIA NIM, with retries, backoff and fallback to a second model when rate-limited.</li>
-            <li>Cut pipeline cost by 62%, to under $0.01 a page, with a model change and explicit context caching.</li>
-            <li>"Ask Rori" is a streaming chat agent that answers from the patient's records and cites them, and every citation is checked against records the user owns.</li>
-            <li>AWS with Terraform (ECS, Lambda, Aurora DSQL, Cognito, S3, KMS), GitHub Actions over OIDC, 700+ tests.</li>
+
+          <ul class="rows rows--menu">
+            <li class="row item" data-help="Two pages, plain layout, the same facts as this site. Downloads as a PDF.">
+              <a class="row__link" href="cv.pdf" download="Kevin-Daniel-Molina-CV.pdf"><span class="k">► Download CV</span><span class="v">[cv.pdf]</span></a>
+            </li>
+            <li class="row item" data-help="Email is the fastest way to reach me.">
+              <a class="row__link" href="mailto:daniel.97.molin@gmail.com"><span class="k">► Email me</span><span class="v">[daniel.97.molin@gmail.com]</span></a>
+            </li>
           </ul>
-          <p class="stack">Java, Spring Boot, Spring AI, React, TypeScript, Python, AWS, Vertex AI</p>
-          <div class="buttons">
-            <a class="btn" href="https://app.rori.health" target="_blank" rel="noopener noreferrer"><span>Open app.rori.health</span></a>
-          </div>
-        </div>
-      </section>
 
-      <section class="win win--eoplat" aria-labelledby="eoplat-title" data-win data-nav="projects">
-        <p class="win__title" aria-hidden="true"><span>eoplat.org</span></p>
-        <div class="win__body">
-          <figure class="shot">
-            <img src="assets/eoplat.jpg" alt="EOPLAT home page: a group photo of missionaries holding certificates under the headline Descubriendo caminos innovadores" width="1280" height="800" loading="lazy" />
-          </figure>
-          <h2 class="win__heading" id="eoplat-title">EOPLAT</h2>
-          <p class="lede">A web platform for a nonprofit that sends missionaries across Latin America.</p>
-          <p>
-            Their site was a 9-year-old WordPress install. With one junior developer, I rebuilt it,
-            designed their new visual identity, and kept going when they asked for more.
-          </p>
-          <ul class="facts">
-            <li>Static Next.js site with Sanity CMS on Cloudflare Pages, plus a serverless AWS backend (Lambda, Cognito, DynamoDB, SST) for mission sign-ups.</li>
-            <li>A missionary management module the staff use daily: encrypted documents and alerts before passports and visas expire.</li>
-            <li>A private HumHub network for missionaries and donors, with accounts created on admin approval.</li>
-          </ul>
-          <p class="stack">Next.js, Sanity, AWS Lambda, Cognito, DynamoDB, SST</p>
-          <div class="buttons">
-            <a class="btn" href="https://eoplat.org" target="_blank" rel="noopener noreferrer"><span>Visit eoplat.org</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="win win--archive" aria-labelledby="archive-title" data-win data-nav="projects">
-        <p class="win__title" aria-hidden="true"><span>C:\ARCHIVE</span></p>
-        <div class="win__body">
-          <h2 class="win__heading" id="archive-title">Archive</h2>
-          <p class="archive__note">Earlier apps, now retired. WiMouse and Webcam4all reached about 150K downloads together, paid for by ads and Pro upgrades.</p>
-          <table class="listing">
-            <thead>
-              <tr><th scope="col">Name</th><th scope="col">What it did</th><th scope="col">Built with</th><th scope="col">Links</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">WIMOUSE</th>
-                <td data-label="What it did">Turned a phone into a touchpad, keyboard and media remote for any PC or Mac.</td>
-                <td data-label="Built with">React Native, Electron, WebSockets</td>
-                <td data-label="Links"><a href="https://github.com/daniel97molina/wimouse-website" target="_blank" rel="noopener noreferrer">source</a></td>
-              </tr>
-              <tr>
-                <th scope="row">WEBCAM4ALL</th>
-                <td data-label="What it did">Turned an Android phone into a 1080p wireless webcam, streamed over the local network.</td>
-                <td data-label="Built with">Android, HTTP streaming</td>
-                <td data-label="Links"><a href="https://github.com/daniel97molina/webcam4allSite" target="_blank" rel="noopener noreferrer">source</a></td>
-              </tr>
-              <tr>
-                <th scope="row">ECOLIB</th>
-                <td data-label="What it did">Library system for a private school, simple enough for its youngest students.</td>
-                <td data-label="Built with">React, Spring Boot, PostgreSQL</td>
-                <td data-label="Links"><span class="muted">private</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="listing__foot" aria-hidden="true">3 file(s)</p>
-        </div>
-      </section>
-    </div>
-
-    <!-- ===== skills + credentials ===== -->
-    <div class="pair">
-      <section class="win win--dialog win--skills" id="skills" aria-labelledby="skills-title" data-win data-nav="skills">
-        <p class="win__title" aria-hidden="true"><span>Options</span></p>
-        <div class="win__body">
-          <h2 class="win__heading" id="skills-title">Skills</h2>
-          <div class="clusters">
-            <fieldset class="cluster">
-              <legend>Backend</legend>
-              <ul class="checks">
-                <li>Java</li><li>Spring Boot</li><li>Spring AI</li><li>Node.js</li><li>Express</li><li>REST &amp; SOAP</li><li>JUnit, Mockito</li>
-              </ul>
-            </fieldset>
-            <fieldset class="cluster">
-              <legend>Cloud</legend>
-              <ul class="checks">
-                <li>GCP (GKE, Vertex AI)</li><li>AWS (ECS, Lambda, S3)</li><li>Terraform</li><li>Docker</li><li>GitHub Actions</li><li>Dynatrace</li>
-              </ul>
-            </fieldset>
-            <fieldset class="cluster">
-              <legend>AI</legend>
-              <ul class="checks">
-                <li>LLM pipelines</li><li>RAG &amp; embeddings</li><li>Tool-calling agents</li><li>Context caching</li><li>Claude Code</li>
-              </ul>
-            </fieldset>
-            <fieldset class="cluster">
-              <legend>Data &amp; front</legend>
-              <ul class="checks">
-                <li>PostgreSQL</li><li>Redis</li><li>Oracle</li><li>DynamoDB</li><li>React</li><li>Next.js</li><li>TypeScript</li>
-              </ul>
-            </fieldset>
-          </div>
-        </div>
-      </section>
-
-      <section class="win win--creds" aria-labelledby="creds-title" data-win data-nav="skills">
-        <p class="win__title" aria-hidden="true"><span>creds.txt</span></p>
-        <div class="win__body">
-          <h2 class="win__heading" id="creds-title">Credentials</h2>
-          <dl class="creds">
-            <dt>AWS Certified Cloud Practitioner</dt>
-            <dd>Valid through Apr 2027. <a href="https://www.credly.com/badges/57e0422d-8e5e-420a-80fd-6e138d0cc535" target="_blank" rel="noopener noreferrer">badge</a></dd>
-            <dt>Information Systems Engineering</dt>
-            <dd>Universidad de El Salvador, 2015–2019, graduated with honors</dd>
-            <dt>English C2, Spanish native</dt>
-            <dd>EF SET certified. <a href="https://www.efset.org/cert/E6ZjBV" target="_blank" rel="noopener noreferrer">certificate</a></dd>
+          <h2 class="group">Installed Credentials</h2>
+          <dl class="rows">
+            <div class="row item" data-help="Issued April 2024. The badge link opens Credly.">
+              <dt>AWS Cloud Practitioner</dt>
+              <dd>[Valid to Apr 2027] <a href="https://www.credly.com/badges/57e0422d-8e5e-420a-80fd-6e138d0cc535" target="_blank" rel="noopener noreferrer">badge</a></dd>
+            </div>
+            <div class="row item" data-help="Universidad de El Salvador, Western Campus. Graduated with honors.">
+              <dt>Education</dt>
+              <dd>Information Systems Engineering, 2015–2019, honors</dd>
+            </div>
+            <div class="row item" data-help="EF SET certified. The link opens the certificate.">
+              <dt>Languages</dt>
+              <dd>English C2, Spanish native <a href="https://www.efset.org/cert/E6ZjBV" target="_blank" rel="noopener noreferrer">certificate</a></dd>
+            </div>
           </dl>
         </div>
+        <aside class="help" aria-label="Item specific help">
+          <div class="help__in">
+            <p class="help__title">Item Specific Help</p>
+            <p class="help__text" data-default="↑↓ selects an item, ←→ switches menus. Scrolling and clicking work too.">↑↓ selects an item, ←→ switches menus. Scrolling and clicking work too.</p>
+          </div>
+        </aside>
       </section>
-    </div>
 
-    <!-- ===== art ===== -->
-    <section class="win win--art" id="art" aria-labelledby="art-title" data-win data-nav="art">
-      <p class="win__title" aria-hidden="true"><span>3d-art.gal</span></p>
-      <div class="win__body">
-        <h2 class="win__heading" id="art-title">Off the clock: 3D</h2>
-        <p>I model in Blender and texture in Substance Painter, and sell the results on TurboSquid.</p>
-        <div class="gallery">
-          <figure><img src="assets/3d1.jpg" alt="Planet Earth from orbit, clouds over the Indian Ocean" width="747" height="420" loading="lazy" /></figure>
-          <figure><img src="assets/3d2.jpg" alt="A weathered red and white lighthouse standing in a park" width="747" height="420" loading="lazy" /></figure>
-          <figure><img src="assets/3d3.jpg" alt="A stone step pyramid with a temple on top, on a white background" width="747" height="420" loading="lazy" /></figure>
-          <figure><img src="assets/3d4.jpg" alt="A metal globe with raised green continents and rust on the oceans" width="747" height="420" loading="lazy" /></figure>
-          <figure><img src="assets/3d5.jpg" alt="A white and grey robot drone with two dark wing panels in an empty warehouse" width="747" height="420" loading="lazy" /></figure>
+      <!-- ===== Experience ===== -->
+      <section class="screen" id="experience" aria-labelledby="experience-title">
+        <p class="screen__title" aria-hidden="true">Experience</p>
+        <div class="panel">
+          <h2 class="sr-only" id="experience-title">Experience</h2>
+
+          <article class="job">
+            <div class="row row--head item" data-help="A Canadian telecom, through its digital arm. Three teams since 2022.">
+              <h3 class="k">► TELUS Digital</h3><span class="v">[Jun 2022 – Present]</span>
+            </div>
+            <p class="job__as">Backend Software Engineer</p>
+
+            <div class="sub">
+              <div class="row row--sub item" data-help="The service that picks which offers TELUS and Koodo customers see. Built on the TM Forum TMF680 standard.">
+                <h4 class="k">Recommendation engine</h4><span class="v">[Mar 2025 – Present]</span>
+              </div>
+              <ul class="bullets">
+                <li>I develop and maintain TELUS's recommendation engine, built on the TM Forum TMF680 API, in Java and Spring Boot. It decides which offers and promotions TELUS and Koodo customers see for mobility and home services, at about 40M requests a month.</li>
+                <li>Built a new microservice for the company's real-time offers push. It pulls offers from a new upstream API, merges them with the regular catalog and ranks the result, so offers can react to what a customer just did.</li>
+                <li>There's no separate DevOps team, so I take my own tickets from code to Cloud Deploy releases on GKE and watch them in Dynatrace. I also cover on-call for Black Friday, Cyber Monday and the holidays.</li>
+              </ul>
+            </div>
+
+            <div class="sub">
+              <div class="row row--sub item" data-help="Insurance claims for TELUS Health in Canada. I learned the domain from zero.">
+                <h4 class="k">TELUS Health, claims adjudication</h4><span class="v">[Feb 2023 – Mar 2025]</span>
+              </div>
+              <ul class="bullets">
+                <li>Worked on the engine that decides every insurance claim for TELUS Health in Canada: eligibility, deductibles, coverage percentages. I learned Canadian insurance rules from zero and turned them into tested Java and Spring Boot services talking SOAP and REST to Oracle.</li>
+              </ul>
+            </div>
+
+            <div class="sub">
+              <div class="row row--sub item" data-help="Zimbra is an open-source email and collaboration suite.">
+                <h4 class="k">Zimbra Collaboration Suite</h4><span class="v">[Jun 2022 – Feb 2023]</span>
+              </div>
+              <ul class="bullets">
+                <li>Built Java command-line tools that moved customers off third-party plugins and onto Zimbra's own native features.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="row row--head item" data-help="Contract work, from architecture to production. Both projects are in the Projects menu.">
+              <h3 class="k">► Freelance</h3><span class="v">[Feb 2026 – Present]</span>
+            </div>
+            <p class="job__as">Software Engineer</p>
+            <ul class="bullets">
+              <li>Building Rori and the EOPLAT platform. Contract work, from architecture to production.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="row row--head item" data-help="Universidad de El Salvador, Western Campus. Promoted from assistant to manager in July 2021.">
+              <h3 class="k">► University IT</h3><span class="v">[Sep 2020 – Jun 2022]</span>
+            </div>
+            <p class="job__as">Full Stack Developer &amp; Network Administrator, Universidad de El Salvador</p>
+            <ul class="bullets">
+              <li>Kept a campus running: modernized its Java EE web systems and ran the networks, phones (Asterisk), DNS, mail, Moodle and Docker-hosted apps on Linux. Promoted from assistant to manager in July 2021.</li>
+            </ul>
+          </article>
         </div>
-        <div class="buttons">
-          <a class="btn" href="https://www.turbosquid.com/Search/Artists/3-D-W-o-r-l-d" target="_blank" rel="noopener noreferrer"><span>See them on TurboSquid</span></a>
+        <aside class="help" aria-label="Item specific help">
+          <div class="help__in">
+            <p class="help__title">Item Specific Help</p>
+            <p class="help__text" data-default="Six years, newest first. Select a job to read about it.">Six years, newest first. Select a job to read about it.</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== Projects ===== -->
+      <section class="screen" id="projects" aria-labelledby="projects-title">
+        <p class="screen__title" aria-hidden="true">Projects</p>
+        <div class="panel">
+          <h2 class="sr-only" id="projects-title">Projects</h2>
+
+          <article class="project">
+            <div class="row row--head item" data-help="Built with a physician co-founder. In closed beta with a medical group.">
+              <h3 class="k">► Rori</h3><span class="v">[Closed beta]</span>
+            </div>
+            <div class="project__body">
+              <figure class="shot shot--logo">
+                <img src="assets/rori.webp" alt="Rori logo: a teal magnifying-glass mark over the words AI-powered review of records" width="640" height="448" loading="lazy" />
+              </figure>
+              <div class="project__text">
+                <p class="lede">AI review of medical records, built with a physician co-founder and now in closed beta with a medical group.</p>
+                <p class="prose">
+                  Doctors doing workers' compensation reviews get thousands of scanned pages per patient.
+                  Rori splits them into individual records, dates and categorizes each one, and writes the
+                  summaries. Then the same agent behind its chat builds the patient's medical chart: an
+                  overview, demographics, medications, diagnoses, allergies and more. A 667-page test case
+                  comes back as 141 summarized records, with no failed calls.
+                </p>
+              </div>
+            </div>
+            <ul class="bullets">
+              <li>Async pipeline on Java 25 virtual threads: Textract OCR, then LLM indexing and summaries, each checked by a second QA pass.</li>
+              <li>One LLM layer over Gemini, Claude and NVIDIA NIM, with retries, backoff and fallback to a second model when rate-limited.</li>
+              <li>Cut pipeline cost by 62%, to under $0.01 a page, with a model change and explicit context caching.</li>
+              <li>"Ask Rori" is a streaming chat agent that answers from the patient's records and cites them, and every citation is checked against records the user owns.</li>
+              <li>AWS with Terraform (ECS, Lambda, Aurora DSQL, Cognito, S3, KMS), GitHub Actions over OIDC, 700+ tests.</li>
+            </ul>
+            <dl class="rows">
+              <div class="row item" data-help="Backend in Java and Spring, front end in React.">
+                <dt>Stack</dt><dd>Java, Spring Boot, Spring AI, React, TypeScript, Python, AWS, Vertex AI</dd>
+              </div>
+              <div class="row item" data-help="Opens the app in a new tab. Accounts are invite-only during the beta.">
+                <dt>Link</dt><dd><a href="https://app.rori.health" target="_blank" rel="noopener noreferrer">[app.rori.health]</a></dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="project">
+            <div class="row row--head item" data-help="Built with one junior developer. Live, and the staff use it every day.">
+              <h3 class="k">► EOPLAT</h3><span class="v">[Live]</span>
+            </div>
+            <div class="project__body">
+              <figure class="shot">
+                <img src="assets/eoplat.webp" alt="EOPLAT home page: missionaries holding certificates under the headline Descubriendo caminos innovadores hacia los menos alcanzados" width="800" height="503" loading="lazy" />
+              </figure>
+              <div class="project__text">
+                <p class="lede">A web platform for a nonprofit that sends missionaries across Latin America.</p>
+                <p class="prose">
+                  Their site was a 9-year-old WordPress install. With one junior developer, I rebuilt it,
+                  designed their new visual identity, and kept going when they asked for more.
+                </p>
+              </div>
+            </div>
+            <ul class="bullets">
+              <li>Static Next.js site with Sanity CMS on Cloudflare Pages, plus a serverless AWS backend (Lambda, Cognito, DynamoDB, SST) for mission sign-ups.</li>
+              <li>A missionary management module the staff use daily: encrypted documents and alerts before passports and visas expire.</li>
+              <li>A private HumHub network for missionaries and donors, with accounts created on admin approval.</li>
+            </ul>
+            <dl class="rows">
+              <div class="row item" data-help="Mostly serverless, so it costs the nonprofit very little to run.">
+                <dt>Stack</dt><dd>Next.js, Sanity, AWS Lambda, Cognito, DynamoDB, SST</dd>
+              </div>
+              <div class="row item" data-help="Opens the site in a new tab. It's in Spanish.">
+                <dt>Link</dt><dd><a href="https://eoplat.org" target="_blank" rel="noopener noreferrer">[eoplat.org]</a></dd>
+              </div>
+            </dl>
+          </article>
+
+          <h3 class="group">Legacy Devices</h3>
+          <p class="prose">Earlier apps, now retired. WiMouse and Webcam4all reached about 150K downloads together, paid for by ads and Pro upgrades.</p>
+          <dl class="rows rows--legacy">
+            <div class="row item" data-help="React Native on the phone, Electron on the computer, WebSockets in between.">
+              <dt>WiMouse</dt>
+              <dd>Turned a phone into a touchpad, keyboard and media remote for any PC or Mac. <a href="https://github.com/daniel97molina/wimouse-website" target="_blank" rel="noopener noreferrer">[source]</a></dd>
+            </div>
+            <div class="row item" data-help="Android app, HTTP streaming over the local network.">
+              <dt>Webcam4all</dt>
+              <dd>Turned an Android phone into a 1080p wireless webcam. <a href="https://github.com/daniel97molina/webcam4allSite" target="_blank" rel="noopener noreferrer">[source]</a></dd>
+            </div>
+            <div class="row item" data-help="React, Spring Boot and PostgreSQL. The source is private.">
+              <dt>EcoLib</dt>
+              <dd>A library system for a private school, simple enough for its youngest students. [private]</dd>
+            </div>
+          </dl>
         </div>
+        <aside class="help" aria-label="Item specific help">
+          <div class="help__in">
+            <p class="help__title">Item Specific Help</p>
+            <p class="help__text" data-default="Two current projects and three retired ones. Links open in a new tab.">Two current projects and three retired ones. Links open in a new tab.</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== Skills ===== -->
+      <section class="screen" id="skills" aria-labelledby="skills-title">
+        <p class="screen__title" aria-hidden="true">Installed Skills</p>
+        <div class="panel">
+          <h2 class="sr-only" id="skills-title">Skills</h2>
+          <div class="skill-groups">
+            <div class="skill-group">
+              <h3 class="group">Backend</h3>
+              <ul class="rows">
+                <li class="row item" data-help="Six years. My main language."><span class="k" aria-hidden="true">Java</span><button type="button" class="toggle" data-label="Java">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Spring Boot</span><button type="button" class="toggle" data-label="Spring Boot">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Spring AI</span><button type="button" class="toggle" data-label="Spring AI">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Node.js, Express</span><button type="button" class="toggle" data-label="Node.js">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">REST &amp; SOAP</span><button type="button" class="toggle" data-label="REST and SOAP">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">JUnit, Mockito</span><button type="button" class="toggle" data-label="JUnit">[Enabled]</button></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="group">Cloud</h3>
+              <ul class="rows">
+                <li class="row item" data-help="GKE, Vertex AI, Cloud Deploy, IAM and Secret Manager."><span class="k" aria-hidden="true">GCP</span><button type="button" class="toggle" data-label="GCP">[Enabled]</button></li>
+                <li class="row item" data-help="ECS, Lambda, S3, Cognito, KMS, Textract. Certified Cloud Practitioner."><span class="k" aria-hidden="true">AWS</span><button type="button" class="toggle" data-label="AWS">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Terraform</span><button type="button" class="toggle" data-label="Terraform">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Docker</span><button type="button" class="toggle" data-label="Docker">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">GitHub Actions</span><button type="button" class="toggle" data-label="GitHub Actions">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Dynatrace</span><button type="button" class="toggle" data-label="Dynatrace">[Enabled]</button></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="group">AI</h3>
+              <ul class="rows">
+                <li class="row item"><span class="k" aria-hidden="true">LLM pipelines</span><button type="button" class="toggle" data-label="LLM pipelines">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">RAG &amp; embeddings</span><button type="button" class="toggle" data-label="RAG">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Tool-calling agents</span><button type="button" class="toggle" data-label="Agents">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Context caching</span><button type="button" class="toggle" data-label="Context caching">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Claude Code</span><button type="button" class="toggle" data-label="Claude Code">[Enabled]</button></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="group">Data &amp; Front End</h3>
+              <ul class="rows">
+                <li class="row item"><span class="k" aria-hidden="true">PostgreSQL</span><button type="button" class="toggle" data-label="PostgreSQL">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Redis</span><button type="button" class="toggle" data-label="Redis">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">Oracle</span><button type="button" class="toggle" data-label="Oracle">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">DynamoDB</span><button type="button" class="toggle" data-label="DynamoDB">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">React, Next.js</span><button type="button" class="toggle" data-label="React">[Enabled]</button></li>
+                <li class="row item"><span class="k" aria-hidden="true">TypeScript</span><button type="button" class="toggle" data-label="TypeScript">[Enabled]</button></li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 class="group">Daniel Configuration</h3>
+              <ul class="rows">
+                <li class="row item" data-help="Required for normal operation."><span class="k" aria-hidden="true">Coffee Supply</span><button type="button" class="toggle" data-label="Coffee supply">[Enabled]</button></li>
+                <li class="row item" data-help="Drums and guitar, mostly on weekends."><span class="k" aria-hidden="true">Drum Volume</span><button type="button" class="toggle" data-label="Drum volume" data-values="Loud,Louder,Neighbors">[Loud]</button></li>
+                <li class="row item" data-help="Hardware setting. Two boys, same birthday."><span class="k" aria-hidden="true">Twin Mode</span><button type="button" class="toggle" data-label="Twin mode" data-values="x2" data-locked="Twin Mode is a hardware setting. It cannot be changed.">[x2]</button></li>
+                <li class="row item" data-help="See Twin Mode."><span class="k" aria-hidden="true">Sleep</span><button type="button" class="toggle" data-label="Sleep" data-values="Disabled" data-locked="Locked by Twin Mode. Supervisor password required, and there isn't one.">[Disabled]</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <aside class="help" aria-label="Item specific help">
+          <div class="help__in">
+            <p class="help__title">Item Specific Help</p>
+            <p class="help__text" data-default="What I work with. +/− or Enter changes a value. Changes take effect on Save and Exit, at your own risk.">What I work with. +/− or Enter changes a value. Changes take effect on Save and Exit, at your own risk.</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== Art ===== -->
+      <section class="screen" id="art" aria-labelledby="art-title">
+        <p class="screen__title" aria-hidden="true">Off the Clock: 3D</p>
+        <div class="panel">
+          <h2 class="sr-only" id="art-title">Off the clock: 3D</h2>
+          <p class="prose">I model in Blender and texture in Substance Painter, and sell the results on TurboSquid.</p>
+          <div class="gallery">
+            <figure class="item" data-help="Planet Earth from orbit, clouds over the Indian Ocean."><img src="assets/3d1.webp" alt="Planet Earth from orbit, clouds over the Indian Ocean" width="747" height="420" loading="lazy" /></figure>
+            <figure class="item" data-help="A weathered red and white lighthouse."><img src="assets/3d2.webp" alt="A weathered red and white lighthouse standing in a park" width="747" height="420" loading="lazy" /></figure>
+            <figure class="item" data-help="A stone step pyramid with a temple on top."><img src="assets/3d3.webp" alt="A stone step pyramid with a temple on top, on a white background" width="747" height="420" loading="lazy" /></figure>
+            <figure class="item" data-help="A metal globe with raised continents and rust on the oceans."><img src="assets/3d4.webp" alt="A metal globe with raised green continents and rust on the oceans" width="747" height="420" loading="lazy" /></figure>
+            <figure class="item" data-help="A white and grey robot drone with two dark wing panels."><img src="assets/3d5.webp" alt="A white and grey robot drone with two dark wing panels in an empty warehouse" width="747" height="420" loading="lazy" /></figure>
+          </div>
+          <ul class="rows rows--menu">
+            <li class="row item" data-help="Opens my TurboSquid store in a new tab.">
+              <a class="row__link" href="https://www.turbosquid.com/Search/Artists/3-D-W-o-r-l-d" target="_blank" rel="noopener noreferrer"><span class="k">► See them on TurboSquid</span><span class="v">[turbosquid.com]</span></a>
+            </li>
+          </ul>
+        </div>
+        <aside class="help" aria-label="Item specific help">
+          <div class="help__in">
+            <p class="help__title">Item Specific Help</p>
+            <p class="help__text" data-default="What I do when the house is quiet. Select a model to read about it.">What I do when the house is quiet. Select a model to read about it.</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== Boot ===== -->
+      <section class="screen" id="boot" aria-labelledby="boot-title">
+        <p class="screen__title" aria-hidden="true">Boot Priority</p>
+        <div class="panel">
+          <h2 class="sr-only" id="boot-title">What I'm looking for</h2>
+          <p class="prose">The roles I'm looking for, in order. I'm open to remote and contract roles with US and Canadian teams.</p>
+          <ol class="rows rows--boot">
+            <li class="row item" data-help="Java and Spring services at scale. The thing I've done the longest."><span class="k">1. Senior Backend Engineer</span></li>
+            <li class="row item" data-help="LLM pipelines, agents and the infrastructure under them, like Rori."><span class="k">2. AI Engineer</span></li>
+            <li class="row item" data-help="Backend-heavy, but I'm comfortable in React and Next.js."><span class="k">3. Full Stack Engineer</span></li>
+          </ol>
+          <dl class="rows">
+            <div class="row item" data-help="I've worked remote with Canadian teams since 2022.">
+              <dt>Boot Mode</dt><dd>[Remote]</dd>
+            </div>
+            <div class="row item" data-help="Where I want my teams to be.">
+              <dt>Regions</dt><dd>[US, Canada]</dd>
+            </div>
+            <div class="row item" data-help="Full-time or contract, both work.">
+              <dt>Contract Roles</dt><dd>[Enabled]</dd>
+            </div>
+            <div class="row item" data-help="UTC−6 all year, no daylight saving. Same as Central in winter, an hour behind it in summer.">
+              <dt>Time Zone</dt><dd>[UTC−6]</dd>
+            </div>
+          </dl>
+        </div>
+        <aside class="help" aria-label="Item specific help">
+          <div class="help__in">
+            <p class="help__title">Item Specific Help</p>
+            <p class="help__text" data-default="Setup boots the first role that matches. The order is fixed by the user.">Setup boots the first role that matches. The order is fixed by the user.</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ===== Exit ===== -->
+      <section class="screen" id="exit" aria-labelledby="exit-title">
+        <p class="screen__title" aria-hidden="true">Exit</p>
+        <div class="panel">
+          <h2 class="contact__q" id="exit-title">Hire Daniel?</h2>
+          <p class="prose">I'm open to remote and contract roles with US and Canadian teams, mostly senior backend work, and AI engineering too. Email is the fastest way to reach me.</p>
+
+          <ul class="rows rows--menu">
+            <li class="row item" data-help="daniel.97.molin@gmail.com. Opens your mail app.">
+              <a class="row__link" href="mailto:daniel.97.molin@gmail.com"><span class="k">► Email</span><span class="v">[daniel.97.molin@gmail.com]</span></a>
+            </li>
+            <li class="row item" data-help="Opens LinkedIn in a new tab.">
+              <a class="row__link" href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175" target="_blank" rel="noopener noreferrer"><span class="k">► LinkedIn</span><span class="v">[Kevin Daniel Molina]</span></a>
+            </li>
+            <li class="row item" data-help="Opens GitHub in a new tab.">
+              <a class="row__link" href="https://github.com/daniel97molina" target="_blank" rel="noopener noreferrer"><span class="k">► GitHub</span><span class="v">[daniel97molina]</span></a>
+            </li>
+            <li class="row item" data-help="Two pages, plain layout. Downloads as a PDF.">
+              <a class="row__link" href="cv.pdf" download="Kevin-Daniel-Molina-CV.pdf"><span class="k">► Download CV</span><span class="v">[cv.pdf]</span></a>
+            </li>
+          </ul>
+
+          <h3 class="group needs-js">Setup</h3>
+          <ul class="rows rows--menu needs-js">
+            <li class="row item" data-help="Saves your changes and restarts the system. Good luck.">
+              <button type="button" class="row__link" data-act="save"><span class="k">Exit Saving Changes</span><span class="v">F10</span></button>
+            </li>
+            <li class="row item" data-help="Restarts the system without saving your changes.">
+              <button type="button" class="row__link" data-act="exit-discard"><span class="k">Exit Discarding Changes</span></button>
+            </li>
+            <li class="row item" data-help="Sets every value back to its default, and the colors too.">
+              <button type="button" class="row__link" data-act="defaults"><span class="k">Load Setup Defaults</span><span class="v">F9</span></button>
+            </li>
+            <li class="row item" data-help="The fail-safe version of this site: my plain two-page CV, as a PDF.">
+              <a class="row__link" href="cv.pdf" target="_blank" rel="noopener"><span class="k">Load Fail-Safe Defaults</span><span class="v">[plain CV]</span></a>
+            </li>
+            <li class="row item" data-help="Goes back to the last saved values without restarting.">
+              <button type="button" class="row__link" data-act="discard"><span class="k">Discard Changes</span></button>
+            </li>
+          </ul>
+
+          <p class="credits">Built by hand: HTML, CSS and a little JavaScript. Type: IBM VGA 8x16 by VileR (CC BY-SA 4.0) and Atkinson Hyperlegible.</p>
+        </div>
+        <aside class="help" aria-label="Item specific help">
+          <div class="help__in">
+            <p class="help__title">Item Specific Help</p>
+            <p class="help__text" data-default="Contact options first, setup options below.">Contact options first, setup options below.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <!-- ===== key legend ===== -->
+    <footer class="legend needs-js">
+      <div class="legend__grid">
+        <button type="button" class="key" data-act="help"><b>F1</b> Help</button>
+        <span class="key key--info"><b>↑↓</b> Select Item</span>
+        <span class="key key--info"><b>−/+</b> Change Values</span>
+        <button type="button" class="key" data-act="defaults"><b>F9</b> <span class="key__long">Setup </span>Defaults</button>
+        <button type="button" class="key key--esc" data-act="exit"><b>Esc</b> Exit</button>
+        <span class="key key--menu"><button type="button" data-act="prev" aria-label="Previous menu"><b>←</b></button><button type="button" data-act="next" aria-label="Next menu"><b>→</b></button> <span class="key__label">Select Menu</span></span>
+        <span class="key key--info"><b>Enter</b> Select ► Sub-Menu</span>
+        <button type="button" class="key" data-act="save"><b>F10</b> Save <span class="key__long">and</span><span class="key__short">&amp;</span> Exit</button>
       </div>
-    </section>
+    </footer>
+  </div>
 
-    <!-- ===== contact ===== -->
-    <section class="win win--dialog win--contact" id="contact" aria-labelledby="contact-title" data-win data-nav="contact">
-      <p class="win__title" aria-hidden="true"><span>Confirm</span></p>
-      <div class="win__body">
-        <h2 class="contact__q" id="contact-title">Hire Daniel?</h2>
-        <p>I'm open to remote and contract roles with US and Canadian teams, mostly senior backend work, and AI engineering too. Email is the fastest way to reach me.</p>
-        <p class="contact__mail"><a href="mailto:daniel.97.molin@gmail.com">daniel.97.molin@gmail.com</a></p>
-        <div class="buttons buttons--center">
-          <a class="btn btn--default" href="mailto:daniel.97.molin@gmail.com"><span>Yes, email</span></a>
-          <a class="btn" href="https://www.linkedin.com/in/kevin-daniel-molina-ram%C3%ADrez-bba002175" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span></a>
-          <a class="btn" href="https://github.com/daniel97molina" target="_blank" rel="noopener noreferrer"><span>GitHub</span></a>
-        </div>
-      </div>
-    </section>
+  <!-- ===== setup dialog ===== -->
+  <dialog class="confirm" id="confirm" aria-labelledby="confirm-title">
+    <form method="dialog">
+      <p class="confirm__title" id="confirm-title">Setup Confirmation</p>
+      <div class="confirm__body" id="confirm-body"></div>
+      <p class="confirm__buttons" id="confirm-buttons"></p>
+    </form>
+  </dialog>
 
-    <p class="credits">Built by hand: HTML, CSS and a little JavaScript. Type: IBM VGA 8x16 by VileR (CC BY-SA 4.0) and Atkinson Hyperlegible.</p>
-  </main>
-
-  <!-- ===== status line ===== -->
-  <footer class="statusline">
-    <p class="statusline__keys" aria-hidden="true">
-      <span><b>W</b> Work</span><span><b>P</b> Projects</span><span><b>S</b> Skills</span><span><b>A</b> Art</span><span><b>C</b> Contact</span>
-    </p>
-    <p class="statusline__where">Remote, UTC−6</p>
-  </footer>
+  <!-- ===== restart sequence (easter egg) ===== -->
+  <div class="boot" id="bootscreen" role="dialog" aria-modal="true" aria-label="Simulated system restart" tabindex="-1" hidden>
+    <div class="boot__log" id="bootlog"></div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

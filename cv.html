@@ -168,8 +168,8 @@
         <li>Built an asynchronous processing pipeline on Java 25 virtual threads: Textract OCR, LLM indexing in batches, then per-record summaries, each step checked by a second QA pass. A 667-page production test produced 141 records from 477 model calls, with no failures.</li>
         <li>Wrote a provider-agnostic LLM layer (Gemini on Vertex AI, Claude on Amazon Bedrock, NVIDIA NIM) with retries, exponential backoff and per-call fallback to a second model when rate-limited.</li>
         <li>Cut pipeline cost by 62%, to under $0.01 per page, by changing the primary model and adding explicit context caching shared between each step and its QA pass.</li>
-        <li>Built "Ask Rori", a streaming tool-calling chat agent that answers from the record index, summaries, full records and RAG over embeddings in Amazon S3 Vectors, with every citation verified against the patient's records.</li>
-        <li>Provisioned the AWS infrastructure with Terraform (14 modules): ECS, Lambda (Python), Aurora DSQL, Cognito, S3 and KMS, with GitHub Actions CI/CD over OIDC and 700+ automated tests. Every query is scoped to its owner, record access is audit-logged, and no patient data reaches the logs.</li>
+        <li>Built "Ask Rori", a streaming tool-calling chat agent that answers from the record index, summaries, full records and RAG over embeddings in Amazon S3 Vectors, with every citation verified against the patient's records. The same agent builds each patient's medical chart after upload: overview, demographics, medications, diagnoses and allergies.</li>
+        <li>Provisioned the AWS infrastructure with Terraform (14 modules): ECS, Lambda (Python), Aurora DSQL, Cognito, S3 and KMS, with GitHub Actions CI/CD over OIDC and 700+ automated tests. Every query is scoped to its owner, every record access goes to an audit log, and no patient data reaches the logs.</li>
       </ul>
 
       <h4>EOPLAT, web platform for a missionary nonprofit <span class="when">· eoplat.org · May 2026 – Present</span></h4>
